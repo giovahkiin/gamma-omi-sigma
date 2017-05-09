@@ -2,9 +2,12 @@
 <html>
 	<head>
 		<title> Login Page </title>
+		<link rel = "stylesheet" type = "text/css" href = "Login.css">
 	</head>
 	<body>
-		<img src = "logo.png">
+		<div id = "Logo">
+			<img src = "logo.png">
+		</div>
 		<form>
 			<div id = "Input">
 				<input type = "text" placeholder = "Username">
