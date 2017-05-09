@@ -19,7 +19,7 @@
 					<li> <a href = "./Catalog.php"> Catalog </a> </li>
 				</div>
 				<div id = "Cart">
-					<li> <a href = "./My_Cart.php"> My Cart </a> </li>
+					<li> <a href = "./Cart.php"> My Cart </a> </li>
 				</div>
 				<div id = "Statistics">
 					<li> Statistics </li>

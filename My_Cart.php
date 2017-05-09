@@ -19,10 +19,10 @@
 		</div>
 		<div class = "Table">
 			<table>
-				<tr>
+				<tr> 
 					<th> Date </th>
 				</tr>
-				<tr>
+				<tr> 
 					<td> Product </td>
 					<td> Type </td>
 					<td> Color </td>

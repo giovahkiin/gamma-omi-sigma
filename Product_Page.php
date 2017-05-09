@@ -20,7 +20,7 @@
                     <h1>Product X</h1>
                 </div>
             </div>
-
+            
             <div id = "content">
                 <div id = "left">
                     <div id = "leftInput">
@@ -32,10 +32,10 @@
                     Color:<br>
 
                     Personalization Options:<br>
-                    <!-- This too is a placeholder since drop down buttons require css-->
+                    <!-- This too is a placeholder since drop down buttons require css-->    
                     <input type = "text" name ="Options" placeholer ="Options"><br>
 
-                    Dimensions:<br>
+                    Dimensions:<br> 
 
                     Quantity:
                     <input type = "number" name="Quantity" value ="0" min="1" max = "99"> <br>
@@ -43,16 +43,17 @@
                     Price<br>
                     </form>
                     </div>
-
+                    
                     <div id = "rightSubmit">
                     <form>
                     <input  type= submit value ="Submit" >
                     </form>
-                    </div>
+                    </div>    
                 </div>
-
+                
                 <div right>
-                    *Insert Image*
+                    <h5>20% off!</h5>
+                    <h1>Insert Image</h1>
                 </div>
             </div>
         </div>

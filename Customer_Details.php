@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Cart</title>
     </head>
-
+    
     <body>
         <div id="container">
             <div id = "Bar">
@@ -19,7 +19,7 @@
                     <h1>Customer Details</h1>
                 </div>
             </div>
-
+            
             <div id ="content">
                 <div id = left>
                     <form>
@@ -27,26 +27,26 @@
                         <input type ="text" name="fName"
                         placeholder="First Name">
                         <input type ="text" name="fName" placeholder="Last Name"><br>
-
+                    
                         Recipient Name:<br>
                         <input type= "text" name ="fName" placeholder = "First Name">
                         <input type="text" name ="lName" placeholder = "Last Name"><br>
-
+                        
                         Deliver Address:
                         <input type= "text" name ="address" placeholder = "Address">
                     </form>
                 </div>
-
+                
                 <div id = right>
                     <div id="leftforms">
                     <form>
                         Delivery Schedule:
                         <input type="date" name="delivDate" placeholder="DD/MM/YY"><br>
-
+                        
                         Time:
                         <input type = "time" name ="delivTime" placeholder="24:00">
                         <br>
-
+                        
                         <input type="checkbox" name="isGift">
                         It a Gift?<br>
                     </form>
@@ -56,7 +56,7 @@
                         <input type ="submit" value ="Check Out"> Yes<br>
                         </form>
                     </div>
-                </div>
+                </div>    
             </div>
         </div>
     </body>

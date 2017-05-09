@@ -19,7 +19,7 @@
 			<input type = "text" placeholder = "search">
 		<div id = "Table">
 			<table>
-				<tr>
+				<tr> 
 					<td> Item Number </td>
 					<td> Type </td>
 					<td> Color </td>

@@ -18,27 +18,27 @@
                     <h1>Update Product</h1>
                 </div>
             </div>
-
+            
             <div id = "content">
                 <div id = "left">
                         <div id="leftforms">
                         <form>
                         Product ID:<br>
                         <input type="text" name="productID" value="Product ID"><br>
-
+                    
                         Product Line:<br>
                         <input type="text" name="productLine" value="Name"><br>
-
+                    
                         Type:<br>
                         <input type="text" name="productType" value="Type"><br>
-
+                    
                         Dimensions:<br>
                         <input type="text" name="length" value="Length">
                         <input type="text" name="width" value="Width">
                         <input type="text" name="height" value="Height">
                         </form>
                         </div>
-
+                        
                         <!-- Might replace to drop down buttons-->
                         <div id="buttons">
                         <forms>
@@ -52,34 +52,32 @@
                         <input type="radio" name="color" value="black"> Black<br>
                         </forms>
                         </div>
-
+                    
                 </div>
-
+                
                 <div id="right">
-
+                    
                         <div id="rightforms">
                         <form>
-                        Personalization Options:<br>
-                        <input type="radio" name="personalization" value="option1"> Option 1<br>
-                        <input type="radio" name="personalization" value="option2"> Option 2<br>
-                        <input type="radio" name="personalization" value="option3"> Option 3<br>
-
+                        Personalization Limit:<br>
+                        <input type = "number" name="pLimit" value ="0" min="0" max = "99"> <br>
+                    
                         Suggested Retail Price:<br>
                         <input type="text" name="srp" value = SRP>
-
+                            
                         Current Stock: <br>
                         <input type="number" name="stock" min ="0" max="99">
-                        </form>
+                        </form> 
                         </div>
-
+                
                         <div id="submit">
                         <form>
                         <input type="submit" value ="Delete">
                         <input type= "submit" value="Update">
-                        </form>
+                        </form> 
                         </div>
-
-
+                       
+                        
                 </div>
             </div>
             <div id = "footer">

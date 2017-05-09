@@ -17,10 +17,10 @@
 		</div>
 		<div id = "Table">
 			<table>
-				<tr>
+				<tr> 
 					<th> Date </th>
 				</tr>
-				<tr>
+				<tr> 
 					<td> Item </td>
 					<td> Red </td>
 					<td> Orange </td>
