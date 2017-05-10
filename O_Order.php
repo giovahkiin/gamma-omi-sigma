@@ -19,18 +19,12 @@
 			<input type = "text" placeholder = "search">
 		<div id = "Table">
 			<table>
-				<tr> 
-					<td> Order Number </td>
-					<td> Quantity Ordered </td>
-					<td> Discount </td>
-					<td> Total Amount </td>
-				</tr>
-				<tr>
-					<td> (xxxx) <td>
-					<td> (x) </td>
-					<td> (x) </td>
-					<td> (x) </td>
-				</tr>
+				<<?php
+			 	include 'config.php';
+				$sqlresult = $conn->query("SELECT request.order_no AS 'Order Number', request.quantity AS 'Quantity Ordered', request.discount AS 'Discount', request.total_amount as 'Total Amount' FROM request WHERE request.order_no = orders.order_no;");
+	            echo sql_to_html_table($sqlresult, $delim = "\n");
+				$conn->close();
+			 ?>
 				<tr>
 					<th> Total Sales </th>
 					<td> (x) </td>
