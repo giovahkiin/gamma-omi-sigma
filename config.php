@@ -10,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
 }
-echo "Connection to " . $servername . " " . $dbname . " success <br>";
+// echo "Connection to " . $servername . " " . $dbname . " success <br>";
 
 // source: https://stackoverflow.com/a/26891213
 function sql_to_html_table($sqlresult, $delim = "\n") {
@@ -39,6 +39,13 @@ function sql_to_html_table($sqlresult, $delim = "\n") {
    $htmltable .= "</table>" . $delim;
    // return
    return ($htmltable);
+}
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 
 ?>

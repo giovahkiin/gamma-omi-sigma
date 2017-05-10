@@ -65,23 +65,17 @@
             </div>
 
             <?php
-                // function test_input($data) {
-                //     $data = trim($data);
-                //     $data = stripslashes($data);
-                //     $data = htmlspecialchars($data);
-                //     return $data;
-                // }
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $productLine = $_POST["productLine"];
-                    $productType = $_POST["productType"];
-                    $length = $_POST["length"];
-                    $width = $_POST["width"];
-                    $height = $_POST["height"];
-                    $pLimit = $_POST["pLimit"];
-                    $srp = $_POST["srp"];
+                    $productLine =  test_input($_POST["productLine"]);
+                    $productType =  test_input($_POST["productType"]);
+                    $length =  test_input($_POST["length"]);
+                    $width =  test_input($_POST["width"]);
+                    $height =  test_input($_POST["height"]);
+                    $pLimit =  test_input($_POST["pLimit"]);
+                    $srp =  test_input($_POST["srp"]);
 
                     $sql ="INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, price)
-                    VALUES('" . $productType . "', '" . $productLine . "', " . $pLimit . ", " . $length . ", " . $width . ", " . $height . ", NULL, " . $srp . ");";
+                    VALUES('" . $productType . "', '" . $productLine . "', " . $pLimit . ", " . $length . ", " . $width . ", " . $height . ", NULL, " . $srp . ");"; //TODO: FIX NULL
 
                     if ($conn->query($sql) === TRUE) {
                         echo "New record created successfully";
