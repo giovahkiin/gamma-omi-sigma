@@ -33,9 +33,15 @@
 
                     Personalization Options:<br>
                     <!-- This too is a placeholder since drop down buttons require css-->    
-                    <input type = "text" name ="Options" placeholer ="Options"><br>
+                    <input type = "text" name ="Options" placeholder ="Options"><br>
 
-                    Dimensions:<br> 
+                    Dimensions:<br>
+                    <input type="text" name="length" value="Length">
+                    <input type="text" name="width" value="Width">
+                    <input type="text" name="height" value="Height">
+
+                    Number of Slots: <br>
+                    <input type="number" name="slots" value="0" min="1" max="99">
 
                     Quantity:
                     <input type = "number" name="Quantity" value ="0" min="1" max = "99"> <br>

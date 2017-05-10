@@ -1,5 +1,5 @@
+<!-- edited -->
 <!DOCTYPE HTML>
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -28,9 +28,6 @@
 
                         <div id="leftforms">
                         <form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="POST">
-                        <!-- Item ID:<br>
-                        <input type="text" name="itemID" placeholder="Item ID"><br> -->
-
                         Product Line:<br>
                         <input type="text" name="productLine" placeholder="Name"><br>
 
@@ -41,6 +38,10 @@
                         <input type="text" name="length" placeholder="Length">
                         <input type="text" name="width" placeholder="Width">
                         <input type="text" name="height" placeholder="Height">
+
+                        Number of Slots:<br>
+                        <input type="number" name="slots" value="0" min="1" max="99">
+
                         </div>
 
                         <!-- We might change the radio buttons to a drop down menu-->
@@ -50,13 +51,14 @@
                 <div id="right">
                         <div id="rightforms">
                         Personalization Limit:<br>
-                        <input type = "number" name="pLimit" value ="0" min="0" max = "99"> <br>
+                        <input type = "text" name="pLimit" placeholder="Limit"> <br>
 
                         Suggested Retail Price:<br>
                         <input type="text" name="srp" placeholder = SRP>
                         </div>
 
                         <div id="submit">
+
                         <input type= "reset" value = "Reset">
                         <input type= "submit" value="Submit">
                         </form>
@@ -71,11 +73,12 @@
                     $length =  test_input($_POST["length"]);
                     $width =  test_input($_POST["width"]);
                     $height =  test_input($_POST["height"]);
+                    $slots = test_input($_POST["slots"]);
                     $pLimit =  test_input($_POST["pLimit"]);
                     $srp =  test_input($_POST["srp"]);
 
                     $sql ="INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, price)
-                    VALUES('" . $productType . "', '" . $productLine . "', " . $pLimit . ", " . $length . ", " . $width . ", " . $height . ", NULL, " . $srp . ");"; //TODO: FIX NULL
+                    VALUES('" . $productType . "', '" . $productLine . "', " . $pLimit . ", " . $length . ", " . $width . ", " . $height . ", " . $slots . ", " . $srp . ");";
 
                     if ($conn->query($sql) === TRUE) {
                         echo "New record created successfully";
@@ -85,7 +88,7 @@
     				$conn->close();
                 }
             ?>
-
+            
             <div id = "footer">
 
             </div>

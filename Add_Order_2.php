@@ -25,10 +25,6 @@
                         <form>
                         Product ID<br>
                         <input type="text" name="ProductID" placeholder="Product ID"><br>
-                        
-                        
-                        Is it a Gift?<br>
-                        <input type="checkbox" name="isGift" value="yes">Yes<br>
                         </form>
                     </div>
                     
@@ -51,7 +47,7 @@
                     <div id ="rightforms">
                         <form>
                         Personalization Limit:<br>
-                        <input type = "number" name="pLimit" value ="0" min="0" max = "99"> <br>
+                        <input type = "text" name="pLimit" placeholder="Personalization Limit"> <br>
 
                         Quantity:<br>
                         <input type = "number" name="Quantity" value ="0" min="0" max = "99"> <br>

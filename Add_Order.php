@@ -50,6 +50,9 @@
                     Time:<br>
                     </form>
                     </div>
+                        
+                    Is it a Gift?<br>
+                    <input type="checkbox" name="isGift" value="yes">Yes<br>
                     
                     <div id="submit">
                         <form action=Add_Order_2.php>

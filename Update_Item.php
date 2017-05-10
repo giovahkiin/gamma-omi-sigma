@@ -23,8 +23,6 @@
                 <div id = "left">
                         <div id="leftforms">
                         <form>
-                        Product ID:<br>
-                        <input type="text" name="productID" value="Product ID"><br>
                     
                         Product Line:<br>
                         <input type="text" name="productLine" value="Name"><br>
@@ -36,6 +34,9 @@
                         <input type="text" name="length" value="Length">
                         <input type="text" name="width" value="Width">
                         <input type="text" name="height" value="Height">
+
+                        Number of Slots:<br>
+                        <input type="number" name="slots" value="0" min="1" max="99">
                         </form>
                         </div>
                         
