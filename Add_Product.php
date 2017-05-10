@@ -64,56 +64,6 @@
                         </form>
                         </div>
                 </div>
-
-                <?php
-                        $servername = "localhost";
-                        $username = "root";
-                        $password = "";
-                        $dbname = "PixieDustbyGMO";
-
-                        $itemID = $_POST["itemID"];
-                        $productLine = $_POST["productLine"];
-                        $type = $_POST["productType"];
-                        $color;
-
-                        $length = $_POST["length"];
-                        $width = $_POST["width"];
-                        $height = $_POST["height"];
-
-                        $personalization = $_POST["pLimit"];
-                        $retail = $_POST["srp"];
-
-                        $conn = mysqli_connect($servername, $username, $password, $dbname);
-                        if ($conn->connect_error) {
-                            die("Connection failed: " . $conn->connect_error);
-                        } 
-
-
-                        if (productLine === "Folder") 
-                        {
-                            $sql =  "INSERT INTO catalog (product_type, product_line, personalization_limit, length, width, height, price)
-                                    VALUES ('$type', '$productLine', '$personalization', '$length', '$width', '$height', '$retail')"
-                            $sql .= "INSERT INTO item (item_id, product_type)  VALUES ('$itemID', '$type')";
-                            $sql .= "INSERT INTO folder_features (folder_type) VALUES('$type')";
-                            $sql .= "INSERT INTO stock (product_type) VALUES('$type')";
-                        }
-                        else if(productLine === "Planner")
-                        {
-                            $sql =  "INSERT INTO catalog (product_type, product_line, personalization_limit, length, width, height, price)
-                                    VALUES ('$type', '$productLine', '$personalization', '$length', '$width', '$height', '$retail')"
-                            $sql .= "INSERT INTO item (item_id, product_type)  VALUES ('$itemID', '$type')";
-                            $sql .= "INSERT INTO folder_features (folder_type) VALUES('$type')";
-                            $sql .= "INSERT INTO stock (product_type) VALUES('$type')";
-                        }   
-                        else
-                        {
-                            echo "nothing found";
-                        }
-
-
-                        $conn -> close();
-                        ?>
-
             </div>
             <div id = "footer">
                 
