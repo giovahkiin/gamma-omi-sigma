@@ -34,13 +34,12 @@ CREATE TABLE stock (
 
 ----------PRODUCT CATALOG----------
 CREATE TABLE item (
-	item_id					INT NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
+	item_id					INT(6) ZEROFILL NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
 	color					VARCHAR(8),		
 	product_type			VARCHAR(20),		
 	FOREIGN KEY (color) REFERENCES color(color_name) ON DELETE RESTRICT,
 	FOREIGN KEY (product_type) REFERENCES catalog(product_type) ON DELETE RESTRICT
 );
-ALTER TABLE item AUTO_INCREMENT = 000000;
 
 CREATE TABLE folder_features (
 	folder_type				VARCHAR(20) NOT NULL,
@@ -62,36 +61,33 @@ CREATE TABLE planner_features (
 
 ----------ORDERS AND DELIVERIES----------
 CREATE TABLE agent (
-	agent_id				INT NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
+	agent_id				INT(6) ZEROFILL NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
 	name             		VARCHAR(255) DEFAULT "Anonymous"
 );
-ALTER TABLE agent AUTO_INCREMENT = 000000;
 
 CREATE TABLE customer (
-	customer_id				INT NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
+	customer_id				INT(6) ZEROFILL NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
 	name 					VARCHAR(255) DEFAULT "Anonymous",
 	isBuyer					BOOLEAN DEFAULT TRUE,
 	isRecipient				BOOLEAN DEFAULT TRUE,
 	address					VARCHAR(255) DEFAULT "Unknown",
-	agent_id				INT NOT NULL,
+	agent_id				INT(6) ZEROFILL NOT NULL,
 	FOREIGN KEY (agent_id) REFERENCES agent(agent_id) ON DELETE RESTRICT
 );
-ALTER TABLE customer AUTO_INCREMENT = 000000;
 
 ----------AGENT TRANSACTIONS----------
 CREATE TABLE orders (
-	order_no				INT NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
-	customer_id				INT NOT NULL,
+	order_no				INT(8) ZEROFILL NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
+	customer_id				INT(6) ZEROFILL NOT NULL,
 	order_date				DATE DEFAULT '1990-01-01',
 	amount_due				FLOAT(2) DEFAULT 0.00,
 	FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON DELETE RESTRICT
 );
-ALTER TABLE orders AUTO_INCREMENT = 000000;
 
 ----------ORDERS AND DELIVERIES----------
 CREATE TABLE delivery (
-	order_no				INT NOT NULL,
-	recipient_id			INT NOT NULL,
+	order_no				INT(8) ZEROFILL NOT NULL,
+	recipient_id			INT(6) ZEROFILL NOT NULL,
 	delivery_date			DATE DEFAULT '1990-01-01',
 	delivery_time			TIME DEFAULT '00:00:00',
 	isGift					BOOLEAN DEFAULT FALSE,
@@ -100,7 +96,7 @@ CREATE TABLE delivery (
 );
 
 CREATE TABLE request (
-	order_no				INT NOT NULL,
+	order_no				INT(8) ZEROFILL NOT NULL,
 	product_type			VARCHAR(20) NOT NULL,
 	color     				VARCHAR(8) NOT NULL,
 	personalization    		VARCHAR(255),
@@ -112,6 +108,15 @@ CREATE TABLE request (
 	FOREIGN KEY (order_no) REFERENCES orders(order_no) ON DELETE RESTRICT,
 	FOREIGN KEY (product_type) REFERENCES catalog(product_type) ON DELETE RESTRICT,
 	CHECK (quantity between 1 and 99)
+);
+
+CREATE TABLE request_item (
+	order_no				INT(8) ZEROFILL NOT NULL,	
+	product_type			VARCHAR(20) NOT NULL,
+	item_id					INT(6) ZEROFILL NOT NULL,
+	PRIMARY KEY (order_no, product_type, item_id),
+	FOREIGN KEY (order_no, product_type) REFERENCES request(order_no, product_type) ON DELETE RESTRICT,
+	FOREIGN KEY (item_id) REFERENCES item(item_id) ON DELETE RESTRICT
 );
 
 
