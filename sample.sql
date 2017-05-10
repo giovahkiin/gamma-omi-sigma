@@ -79,4 +79,11 @@ VALUES (1, "Flipper", "Red", "~Carlo~", 1, 0.00, 745);
 INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
 VALUES (2, "Slinger", "Orange", "~Gio~", 1, 0.00, 95);
 INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
-VALUES (2, "Doodler", "Yellow", "~300~", 1, 0.00, 595);
+VALUES (3, "Doodler", "Yellow", "~300~", 1, 0.00, 595);
+--insert item_id for each request--
+INSERT INTO request_item(order_no, product_type, item_id)
+VALUES (1, "Flipper", 1);
+INSERT INTO request_item(order_no, product_type, item_id)
+VALUES (2, "Slinger", 2);
+INSERT INTO request_item(order_no, product_type, item_id)
+VALUES (3, "Doodler", 3);
