@@ -16,7 +16,7 @@
 		</div>
 		<div id = "Menu">
 			<ul>
-				<li> <a href = "./Product_Page.php"> Product 1 </a> </li>
+				<li> <a href = "./Product_Folder.php"> Folders </a> </li>
 			</ul>
 		</div>
 	</body>
