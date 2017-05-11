@@ -103,10 +103,10 @@ CREATE TABLE request (
 	quantity				INT DEFAULT 1,
 	discount				FLOAT(2) DEFAULT 0.05,			
 	total_amount			FLOAT(2) DEFAULT 0.00,
-	PRIMARY KEY (order_no, product_type),
-	FOREIGN KEY (color) REFERENCES color(color_name) ON DELETE RESTRICT,
+	PRIMARY KEY (order_no, product_type, color),
 	FOREIGN KEY (order_no) REFERENCES orders(order_no) ON DELETE RESTRICT,
 	FOREIGN KEY (product_type) REFERENCES catalog(product_type) ON DELETE RESTRICT,
+	FOREIGN KEY (color) REFERENCES color(color_name) ON DELETE RESTRICT,
 	CHECK (quantity between 1 and 99)
 );
 

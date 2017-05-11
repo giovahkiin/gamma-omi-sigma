@@ -275,22 +275,42 @@ VALUES (5, 6, '2017-05-17', '08:30:00', TRUE);
 INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
 VALUES (1, "Flipper", "Red", "~Carlo~", 1, 0.00, 745);
 INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
+VALUES (1, "Flipper", "Pink", "~Mendoza~", 1, 0.00, 745);
+INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
 VALUES (2, "Slinger", "Orange", "~Gio~", 1, 0.00, 95);
+INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
+VALUES (2, "Slinger", "Black", "~Lopez~", 1, 0.00, 95);
 INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
 VALUES (3, "Doodler", "Yellow", "~300~", 1, 0.00, 595);
 INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
-VALUES (4, "Filer", "Green", "~Pewds~", 1, 0.00, 595);
+VALUES (3, "Doodler", "Blue", "~CCC~", 1, 0.00, 595);
 INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
-VALUES (5, "Shifter", "Blue", "~Jack~", 1, 0.00, 595);
+VALUES (4, "Filer", "Green", "~Pewds~", 1, 0.00, 995);
+INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
+VALUES (4, "Filer", "Purple", "~Pewdie~", 1, 0.00, 995);
+INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
+VALUES (5, "Shifter", "Red", "~Jack~", 1, 0.00, 595);
+INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
+VALUES (5, "Shifter", "Blue", "~Septiceye~", 1, 0.00, 595);
 
 --insert item_id for each request--
 INSERT INTO request_item(order_no, product_type, item_id)
 VALUES (1, "Flipper", 1);
 INSERT INTO request_item(order_no, product_type, item_id)
-VALUES (2, "Slinger", 2);
+VALUES (1, "Flipper", 7);
 INSERT INTO request_item(order_no, product_type, item_id)
-VALUES (3, "Doodler", 3);
+VALUES (2, "Slinger", 10);
 INSERT INTO request_item(order_no, product_type, item_id)
-VALUES (4, "Filer", 4);
+VALUES (2, "Slinger", 16);
 INSERT INTO request_item(order_no, product_type, item_id)
-VALUES (5, "Shifter", 5);
+VALUES (3, "Doodler", 19);
+INSERT INTO request_item(order_no, product_type, item_id)
+VALUES (3, "Doodler", 28);
+INSERT INTO request_item(order_no, product_type, item_id)
+VALUES (4, "Filer", 28);
+INSERT INTO request_item(order_no, product_type, item_id)
+VALUES (4, "Filer", 30);
+INSERT INTO request_item(order_no, product_type, item_id)
+VALUES (5, "Shifter", 33);
+INSERT INTO request_item(order_no, product_type, item_id)
+VALUES (5, "Shifter", 37);
