@@ -88,7 +88,7 @@
     				$conn->close();
                 }
             ?>
-            
+
             <div id = "footer">
 
             </div>
