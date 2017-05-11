@@ -92,15 +92,15 @@
                         $discountPercent = test_input($_POST["discountPercent"]);
                         $totalPrice = test_input($_POST["totalPrice"]);
 
-                        // $sql ="INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, price)
-                        // VALUES('" . $productType . "', '" . $productLine . "', " . $pLimit . ", " . $length . ", " . $width . ", " . $height . ", " . $slots . ", " . $srp . ");";
-
-                        if ($conn->query($sql) === TRUE) {
-                            echo "New record created successfully";
-                        } else {
-                            echo "Error: " . $sql . "<br>" . $conn->error;
-                        }
-        				$conn->close();
+                        // $sql ="INSERT INTO orders()
+                        // VALUES();";
+                        //
+                        // if ($conn->query($sql) === TRUE) {
+                        //     // echo "New record created successfully";
+                        // } else {
+                        //     echo "Error: " . $sql . "<br>" . $conn->error;
+                        // }
+        				// $conn->close();
                     }
                 ?>
 
