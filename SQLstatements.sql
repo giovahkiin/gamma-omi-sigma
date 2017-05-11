@@ -79,7 +79,7 @@ CREATE TABLE customer (
 CREATE TABLE orders (
 	order_no				INT(8) ZEROFILL NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
 	customer_id				INT(6) ZEROFILL NOT NULL,
-	order_date				DATE DEFAULT CURDATE(),
+	order_date				DATE DEFAULT '1990-01-01',
 	amount_due				FLOAT(2) DEFAULT 0.00,
 	FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON DELETE RESTRICT
 );
