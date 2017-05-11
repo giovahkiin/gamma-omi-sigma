@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Product Page</title>
-        <?php include 'config.php';?>
+        <?php
+            include 'config.php';
+        ?>
     </head>
 
     <body>
@@ -87,14 +89,18 @@
 
                 <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        $Line =  test_input($_POST["Line"]);
+                        $orderID = test_input($_SESSION['orderID']);
+                        $customerID = test_input($_SESSION['customerID']);
+                        $agentID = test_input($_SESSION['agentID']);
+                        $recFName = test_input($_SESSION['recFName']);
+                        $recLName = test_input($_SESSION['recLName']);
+                        $address = test_input($_SESSION['address']);
+                        $date = test_input($_SESSION['date']);
+                        $isGift = test_input($_SESSION['isGift']);
+
                         $Type =  test_input($_POST["Type"]);
                         $color =  test_input($_POST["color"]);
                         $Options =  test_input($_POST["Options"]);
-                        $length =  test_input($_POST["length"]);
-                        $width =  test_input($_POST["width"]);
-                        $height =  test_input($_POST["height"]);
-                        $slots = test_input($_POST["slots"]);
                         $Quantity =  test_input($_POST["Quantity"]);
 
                         // $sql ="INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, price)

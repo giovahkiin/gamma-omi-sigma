@@ -2,6 +2,18 @@
 <html>
 	<head>
 		<title> Product Catalog </title>
+		<?php
+            include 'config.php';
+
+            $_SESSION['orderID'] = $_POST['orderID'];
+            $_SESSION['customerID'] = $_POST['customerID'];
+            $_SESSION['agentID'] = $_POST['agentID'];
+            $_SESSION['recFName'] = $_POST['recFName'];
+            $_SESSION['recLName'] = $_POST['recLName'];
+            $_SESSION['address'] = $_POST['address'];
+            $_SESSION['date'] = $_POST['date'];
+            $_SESSION['isGift'] = $_POST['isGift'];
+        ?>
 	</head>
 	<body>
 		<div id = "Bar">

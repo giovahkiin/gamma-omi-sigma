@@ -23,7 +23,7 @@
 
             <div id ="content">
                 <div id = "left">
-                    <form method="POST" action="./Add_Order_2.php">
+                    <form method="POST" action="./Catalog.php">
                     Order ID:<br>
                     <input type="text" name="orderID" placeholder="Order ID"> <br>
 
