@@ -16,7 +16,9 @@
 		</div>
 		<div id = "Menu">
 			<ul>
-				<li> <a href = "./Product_Folder.php"> Folders </a> </li>
+				<li> <a href = "./Product_Page.php?line=Folder"> Folders </a> </li>
+				<li> <a href = "./Product_Page.php?line=PenOrg"> Pen Organizers </a> </li>
+				<li> <a href = "./Product_Page.php?line=Planner"> Planners </a> </li>
 			</ul>
 		</div>
 	</body>

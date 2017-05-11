@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Product Page: Folder</title>
+        <title>Product Page</title>
         <?php include 'config.php';?>
     </head>
 
@@ -17,8 +17,15 @@
             </div>
             <div id="header">
                 <div id="Product X">
-                <!-- Product X is just a placeholder for the name of the product-->
-                    <h1>Product X</h1>
+                <?php
+                    if ($_GET["line"] == "PenOrg") {
+                        $line = "Pen Organizer";
+                    } else {
+                        $line = $_GET["line"];
+                    }
+
+                    echo "<h1>" . $line . "s</h1>";
+                 ?>
                 </div>
             </div>
 
@@ -33,7 +40,7 @@
                     <?php
                         echo "Type:<br>";
 
-                        $type_result = $conn->query("SELECT product_type FROM catalog WHERE product_line = 'Folder' ORDER BY product_type");
+                        $type_result = $conn->query("SELECT product_type FROM catalog WHERE product_line = '". $line ."' ORDER BY product_type");
                         echo "<select name = 'Type'>";
                         while ($row = $type_result->fetch_assoc()) {
                             unset($product_type);
