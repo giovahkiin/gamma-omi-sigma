@@ -20,11 +20,11 @@
 		<div id = "Table">
 			<table>
 				<?php
- +			 	include 'config.php';
- +				$sqlresult = $conn->query("SELECT request_item.item_id AS 'Item Number', request_item.product_type AS 'Type', request.color AS 'Color', request.quantity as 'Quantity Ordered', request.total_amount AS 'Total Amount' FROM request_item, request WHERE request_item.item_id = item.item_id AND request.product_type = request_item.product_type;");
- +	            echo sql_to_html_table($sqlresult, $delim = "\n");
- +				$conn->close();
- +			 ?>
+	 			 	include 'config.php';
+	 				$sqlresult = $conn->query("SELECT request_item.item_id AS 'Item Number', request_item.product_type AS 'Type', request.color AS 'Color', request.quantity as 'Quantity Ordered', request.total_amount AS 'Total Amount' FROM request_item, request, item WHERE request_item.item_id = item.item_id AND request.product_type = request_item.product_type;");
+		            echo sql_to_html_table($sqlresult, $delim = "\n");
+					$conn->close();
+			 	?>
 				<tr>
 					<th> Total Sales </th>
 					<td> (x) </td>
