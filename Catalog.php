@@ -4,7 +4,7 @@
 		<title> Product Catalog </title>
 		<?php
             include 'config.php';
-
+			session_start();
             $_SESSION['orderID'] = $_POST['orderID'];
             $_SESSION['customerID'] = $_POST['customerID'];
             $_SESSION['agentID'] = $_POST['agentID'];

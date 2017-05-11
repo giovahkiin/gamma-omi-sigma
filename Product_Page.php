@@ -5,6 +5,7 @@
         <title>Product Page</title>
         <?php
             include 'config.php';
+            session_start();
         ?>
     </head>
 
@@ -35,9 +36,6 @@
                 <div id = "left">
                     <div id = "leftInput">
                     <form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="POST">
-
-                    <!-- This input for type is a placeholder since drop down buttons require css-->
-                    <!-- <input type = "text" name="Type" placeholder="Type"><br> -->
 
                     <?php
                         echo "Type:<br>";
@@ -103,15 +101,25 @@
                         $Options =  test_input($_POST["Options"]);
                         $Quantity =  test_input($_POST["Quantity"]);
 
-                        // $sql ="INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, price)
-                        // VALUES('" . $productType . "', '" . $productLine . "', " . $pLimit . ", " . $length . ", " . $width . ", " . $height . ", " . $slots . ", " . $srp . ");";
-                        //
-                        // if ($conn->query($sql) === TRUE) {
-                        //     echo "New record created successfully";
-                        // } else {
-                        //     echo "Error: " . $sql . "<br>" . $conn->error;
-                        // }
-        				// $conn->close();
+                        $sql1 ="INSERT INTO orders (customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
+                        VALUES (" .$orderid.", ".$isGift.", CONCAT('".$recFName."', ' ', '".$recLName ."'), ".$address.", NOW(), ".$date.", ".$deliv_time.");";
+
+                        if ($conn->query($sql1) === TRUE) {
+                            echo "sql1 successfully";
+                        } else {
+                            echo "Error: " . $sql . "<br>" . $conn->error;
+                        }
+
+                        $sql2 ="INSERT INTO request (order_no, product_type, color, personalization, quantity, discount, total_amount)
+                        VALUES (".$orderID.", ''".$Type."'', ''".$color."', '".$Options."', ".$Quantity.", 0.00, (SELECT price from catalog where product_type = '".$Type."') * quantity);";
+
+                        if ($conn->query($sql2) === TRUE) {
+                            echo "sql2 successfully";
+                        } else {
+                            echo "Error: " . $sql . "<br>" . $conn->error;
+                        }
+
+        				$conn->close();
                     }
                 ?>
 

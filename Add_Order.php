@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Add Order</title>
-        <?php include 'config.php';?>
+        <?php
+            include 'config.php';
+            session_start();
+            session_unset();
+        ?>
     </head>
 
     <body>
