@@ -175,6 +175,7 @@ VALUES("Filer", "Pink", 1, '2017-05-10');
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Filer", "Black", 1, '2017-05-10');
 --
+INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Shifter", "Red", 1, '2017-05-11');
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Shifter", "Orange", 1, '2017-05-11');
