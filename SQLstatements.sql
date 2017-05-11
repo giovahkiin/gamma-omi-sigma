@@ -1,8 +1,7 @@
-DROP DATABASE PixieDustbyGMO;
-CREATE DATABASE PixieDustbyGMO;
-USE PixieDustbyGMO;
+DROP DATABASE PixieDustbyGOS;
+CREATE DATABASE PixieDustbyGOS;
+USE PixieDustbyGOS;
 
-----------PRODUCT CATALOG----------
 CREATE TABLE catalog (
 	product_type			VARCHAR(20) DEFAULT 'Flipper' PRIMARY KEY,
 	product_line			VARCHAR(20) DEFAULT 'Folder',
@@ -16,7 +15,6 @@ CREATE TABLE catalog (
 	CHECK (number_of_slots between 3 and 15)
 );
 
-----------INVENTORY----------
 CREATE TABLE color (
 	color_name				VARCHAR(8) NOT NULL PRIMARY KEY,
 	CHECK (color_name IN ('Red, Orange, Yellow, Green, Blue, Purple, Pink, Black'))
@@ -32,7 +30,6 @@ CREATE TABLE stock (
 	CHECK (quantity between 0 and 99)
 );
 
-----------PRODUCT CATALOG----------
 CREATE TABLE item (
 	item_id					INT(6) ZEROFILL NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
 	color					VARCHAR(8),		
@@ -59,7 +56,6 @@ CREATE TABLE planner_features (
 	FOREIGN KEY (planner_type) REFERENCES catalog(product_type) ON DELETE RESTRICT    
 );
 
-----------ORDERS AND DELIVERIES----------
 CREATE TABLE agent (
 	agent_id				INT(6) ZEROFILL NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
 	name             		VARCHAR(255) DEFAULT "Anonymous"
@@ -67,32 +63,21 @@ CREATE TABLE agent (
 
 CREATE TABLE customer (
 	customer_id				INT(6) ZEROFILL NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
-	name 					VARCHAR(255) DEFAULT "Anonymous",
-	isBuyer					BOOLEAN DEFAULT TRUE,
-	isRecipient				BOOLEAN DEFAULT TRUE,
-	address					VARCHAR(255) DEFAULT "Unknown",
+	customer_name 			VARCHAR(255) DEFAULT "Anonymous",
 	agent_id				INT(6) ZEROFILL NOT NULL,
 	FOREIGN KEY (agent_id) REFERENCES agent(agent_id) ON DELETE RESTRICT
 );
 
-----------AGENT TRANSACTIONS----------
 CREATE TABLE orders (
 	order_no				INT(8) ZEROFILL NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
 	customer_id				INT(6) ZEROFILL NOT NULL,
+	isGift					BOOLEAN DEFAULT TRUE,
+	recipient_name			VARCHAR(255) DEFAULT "Anonymous",
+	address					VARCHAR(255) DEFAULT "Unknown",
 	order_date				DATE DEFAULT '1990-01-01',
-	amount_due				FLOAT(2) DEFAULT 0.00,
-	FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON DELETE RESTRICT
-);
-
-----------ORDERS AND DELIVERIES----------
-CREATE TABLE delivery (
-	order_no				INT(8) ZEROFILL NOT NULL,
-	recipient_id			INT(6) ZEROFILL NOT NULL,
 	delivery_date			DATE DEFAULT '1990-01-01',
 	delivery_time			TIME DEFAULT '00:00:00',
-	isGift					BOOLEAN DEFAULT FALSE,
-	FOREIGN KEY (order_no) REFERENCES orders(order_no) ON DELETE RESTRICT,
-	FOREIGN KEY (recipient_id) REFERENCES customer(customer_id) ON DELETE RESTRICT
+	FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON DELETE RESTRICT
 );
 
 CREATE TABLE request (

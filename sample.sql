@@ -234,42 +234,28 @@ INSERT INTO agent(name) VALUES("Gamma Omicron");
 INSERT INTO agent(name) VALUES("Emerald Ruby Diamond");
 
 --insert customer info (id auto increments)--
-INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
-VALUES ("Carlo Mendoza", TRUE, TRUE, "Marikina City", 1);
-INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
-VALUES ("Gener Lopez", TRUE, TRUE, "Quezon City", 2);
-INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
-VALUES ("Christian Chan", TRUE, TRUE, "Manila City", 2);
-INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
-VALUES ("Tim Bergling", TRUE, TRUE, "Stockholm, Sweden", 3);
-INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
-VALUES ("Kyrre Gorvell-Dahl", TRUE, FALSE, "Bergen, Norway", 1);
-INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
-VALUES ("Dara Hayes", FALSE, TRUE, "Sydney, Australia", 3);
+INSERT INTO customer(customer_name, agent_id)
+VALUES ("Carlo Mendoza", 1);
+INSERT INTO customer(customer_name, agent_id)
+VALUES ("Gener Lopez", 2);
+INSERT INTO customer(customer_name, agent_id)
+VALUES ("Christian Chan", 2);
+INSERT INTO customer(customer_name, agent_id)
+VALUES ("Tim Bergling", 3);
+INSERT INTO customer(customer_name, agent_id)
+VALUES ("Kyrre Gorvell-Dahl", 1);
 
 --insert orders--
-INSERT INTO orders(customer_id, order_date, amount_due)
-VALUES (1, '2017-05-12', 6900);
-INSERT INTO orders(customer_id, order_date, amount_due)
-VALUES (2, '2017-05-12', 4200);
-INSERT INTO orders(customer_id, order_date, amount_due)
-VALUES (3, '2017-05-13', 3000);
-INSERT INTO orders(customer_id, order_date, amount_due)
-VALUES (4, '2017-05-13', 12700);
-INSERT INTO orders(customer_id, order_date, amount_due)
-VALUES (5, '2017-05-14', 29600);
-
---insert deliveries--
-INSERT INTO delivery(order_no, recipient_id, delivery_date, delivery_time, isGift)
-VALUES (1, 1, '2017-05-15', '12:30:00', FALSE);
-INSERT INTO delivery(order_no, recipient_id, delivery_date, delivery_time, isGift)
-VALUES (2, 2, '2017-05-15', '14:30:00', FALSE);
-INSERT INTO delivery(order_no, recipient_id, delivery_date, delivery_time, isGift)
-VALUES (3, 3, '2017-05-16', '15:00:00', FALSE);
-INSERT INTO delivery(order_no, recipient_id, delivery_date, delivery_time, isGift)
-VALUES (4, 4, '2017-05-16', '06:45:00', FALSE);
-INSERT INTO delivery(order_no, recipient_id, delivery_date, delivery_time, isGift)
-VALUES (5, 6, '2017-05-17', '08:30:00', TRUE);
+INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
+VALUES (1, FALSE, "Carlo Mendoza", "Marikina City", '2017-05-12', '2017-05-15', '12:30:00');
+INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
+VALUES (2, FALSE, "Gener Lopez", "Quezon City", '2017-05-12', '2017-05-15', '14:30:00');
+INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
+VALUES (3, FALSE, "Christian Chan", "Manila City", '2017-05-13', '2017-05-16', '15:00:00');
+INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
+VALUES (4, FALSE, "Tim Bergling", "Stockholm, Sweden", '2017-05-13', '2017-05-16', '06:45:00');
+INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
+VALUES (5, TRUE, "Dara Hayes", "Bergen, Norway", '2017-05-14', '2017-05-17', '08:30:00');
 
 --insert requests from orders--
 INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
