@@ -9,6 +9,7 @@ INSERT INTO catalog(product_type, product_line, personalization_limit, length, w
 VALUES("Filer", "Folder", 8,  14, 11, 1.5, NULL, 995);
 INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, price)
 VALUES("Shifter", "Pen Organizer", 8, NULL, NULL, NULL, 15, 595);
+
 --insert colors available--
 INSERT INTO color(color_name) VALUES("Red");
 INSERT INTO color(color_name) VALUES("Orange");
@@ -18,104 +19,257 @@ INSERT INTO color(color_name) VALUES("Blue");
 INSERT INTO color(color_name) VALUES("Purple");
 INSERT INTO color(color_name) VALUES("Pink");
 INSERT INTO color(color_name) VALUES("Black");
---insert item_id (auto increment) for individual items--
+
+--insert item_id for each product type in all colors--
 INSERT INTO item(color, product_type)
 VALUES("Red", "Flipper");
 INSERT INTO item(color, product_type)
+VALUES("Orange", "Flipper");
+INSERT INTO item(color, product_type)
+VALUES("Yellow", "Flipper");
+INSERT INTO item(color, product_type)
+VALUES("Green", "Flipper");
+INSERT INTO item(color, product_type)
+VALUES("Blue", "Flipper");
+INSERT INTO item(color, product_type)
+VALUES("Purple", "Flipper");
+INSERT INTO item(color, product_type)
+VALUES("Pink", "Flipper");
+INSERT INTO item(color, product_type)
+VALUES("Black", "Flipper");
+--
+INSERT INTO item(color, product_type)
+VALUES("Red", "Slinger");
+INSERT INTO item(color, product_type)
 VALUES("Orange", "Slinger");
+INSERT INTO item(color, product_type)
+VALUES("Yellow", "Slinger");
+INSERT INTO item(color, product_type)
+VALUES("Green", "Slinger");
+INSERT INTO item(color, product_type)
+VALUES("Blue", "Slinger");
+INSERT INTO item(color, product_type)
+VALUES("Purple", "Slinger");
+INSERT INTO item(color, product_type)
+VALUES("Pink", "Slinger");
+INSERT INTO item(color, product_type)
+VALUES("Black", "Slinger");
+--
+INSERT INTO item(color, product_type)
+VALUES("Red", "Doodler");
+INSERT INTO item(color, product_type)
+VALUES("Orange", "Doodler");
 INSERT INTO item(color, product_type)
 VALUES("Yellow", "Doodler");
 INSERT INTO item(color, product_type)
+VALUES("Green", "Doodler");
+INSERT INTO item(color, product_type)
+VALUES("Blue", "Doodler");
+INSERT INTO item(color, product_type)
+VALUES("Purple", "Doodler");
+INSERT INTO item(color, product_type)
+VALUES("Pink", "Doodler");
+INSERT INTO item(color, product_type)
+VALUES("Black", "Doodler");
+--
+INSERT INTO item(color, product_type)
+VALUES("Red", "Filer");
+INSERT INTO item(color, product_type)
+VALUES("Orange", "Filer");
+INSERT INTO item(color, product_type)
+VALUES("Yellow", "Filer");
+INSERT INTO item(color, product_type)
 VALUES("Green", "Filer");
 INSERT INTO item(color, product_type)
+VALUES("Blue", "Filer");
+INSERT INTO item(color, product_type)
+VALUES("Purple", "Filer");
+INSERT INTO item(color, product_type)
+VALUES("Pink", "Filer");
+INSERT INTO item(color, product_type)
+VALUES("Black", "Filer");
+--
+INSERT INTO item(color, product_type)
+VALUES("Red", "Shifter");
+INSERT INTO item(color, product_type)
+VALUES("Orange", "Shifter");
+INSERT INTO item(color, product_type)
+VALUES("Yellow", "Shifter");
+INSERT INTO item(color, product_type)
+VALUES("Green", "Shifter");
+INSERT INTO item(color, product_type)
 VALUES("Blue", "Shifter");
+INSERT INTO item(color, product_type)
+VALUES("Purple", "Shifter");
+INSERT INTO item(color, product_type)
+VALUES("Pink", "Shifter");
+INSERT INTO item(color, product_type)
+VALUES("Black", "Shifter");
+
 --record items to stock--
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Flipper", "Red", 1, '2017-05-09');
 INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Flipper", "Orange", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Flipper", "Yellow", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Flipper", "Green", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Flipper", "Blue", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Flipper", "Purple", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Flipper", "Pink", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Flipper", "Black", 1, '2017-05-09');
+--
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Slinger", "Red", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Slinger", "Orange", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Slinger", "Yellow", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Slinger", "Green", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Slinger", "Blue", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Slinger", "Purple", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Slinger", "Pink", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Slinger", "Black", 1, '2017-05-09');
+--
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Doodler", "Red", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Doodler", "Orange", 1, '2017-05-09');
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Doodler", "Yellow", 1, '2017-05-09');
 INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Doodler", "Green", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Doodler", "Blue", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Doodler", "Purple", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Doodler", "Pink", 1, '2017-05-09');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Doodler", "Black", 1, '2017-05-09');
+--
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Filer", "Red", 1, '2017-05-10');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Filer", "Orange", 1, '2017-05-10');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Filer", "Yellow", 1, '2017-05-10');
+INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Filer", "Green", 1, '2017-05-10');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Shifter", "Blue", 1, '2017-05-10');
---insert folder features for flipper--
+VALUES("Filer", "Blue", 1, '2017-05-10');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Filer", "Purple", 1, '2017-05-10');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Filer", "Pink", 1, '2017-05-10');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Filer", "Black", 1, '2017-05-10');
+--
+VALUES("Shifter", "Red", 1, '2017-05-11');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Shifter", "Orange", 1, '2017-05-11');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Shifter", "Yellow", 1, '2017-05-11');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Shifter", "Green", 1, '2017-05-11');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Shifter", "Blue", 1, '2017-05-11');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Shifter", "Purple", 1, '2017-05-11');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Shifter", "Pink", 1, '2017-05-11');
+INSERT INTO stock(product_type, color, quantity, last_update)
+VALUES("Shifter", "Black", 1, '2017-05-11');
+
+--insert folder features--
 INSERT INTO folder_features(folder_type, features)
 VALUES("Flipper", "reversible");
 INSERT INTO folder_features(folder_type, features)
 VALUES("Flipper", "slim and compact");
 INSERT INTO folder_features(folder_type, features)
 VALUES("Flipper", "leatherette material");
---insert pen organizer features for slinger--
+INSERT INTO folder_features(folder_type, features)
+VALUES("Filer", "multi-function portfolio organizer");
+INSERT INTO folder_features(folder_type, features)
+VALUES("Filer", "3-ring binder");
+INSERT INTO folder_features(folder_type, features)
+VALUES("Filer", "sleeves for papers");
+
+--insert pen organizer features--
 INSERT INTO organizer_features(organizer_type, features)
 VALUES("Slinger", "magnetic lock");
 INSERT INTO organizer_features(organizer_type, features)
 VALUES("Slinger", "dual ribbon straps with velcro");
 INSERT INTO organizer_features(organizer_type, features)
 VALUES("Slinger", "water repellent");
---insert planner features for doodler--
+INSERT INTO organizer_features(organizer_type, features)
+VALUES("Shifter", "triple zipper");
+INSERT INTO organizer_features(organizer_type, features)
+VALUES("Shifter", "expandable bin");
+INSERT INTO organizer_features(organizer_type, features)
+VALUES("Shifter", "velcro locked pockets");
+
+--insert planner features--
 INSERT INTO planner_features(planner_type, features)
 VALUES("Doodler", "smyth sewn hardbound");
 INSERT INTO planner_features(planner_type, features)
 VALUES("Doodler", "premium 120 gsm paper");
 INSERT INTO planner_features(planner_type, features)
 VALUES("Doodler", "monthly spread");
---insert planner features for filerer--
-INSERT INTO planner_features(planner_type, features)
-VALUES("Filer", "multi-function portfolio organizer");
-INSERT INTO planner_features(planner_type, features)
-VALUES("Filer", "3-ring binder");
-INSERT INTO planner_features(planner_type, features)
-VALUES("Filer", "sleeves for papers");
---insert planner features for doodler--
-INSERT INTO planner_features(planner_type, features)
-VALUES("Shifter", "triple zipper");
-INSERT INTO planner_features(planner_type, features)
-VALUES("Shifter", "expandable bin");
-INSERT INTO planner_features(planner_type, features)
-VALUES("Shifter", "velcro locked pockets");
+
 --insert agent info (id auto increments)--
 INSERT INTO agent(name) VALUES("Axis Snowdrop");
 INSERT INTO agent(name) VALUES("Gamma Omicron");
 INSERT INTO agent(name) VALUES("Emerald Ruby Diamond");
-INSERT INTO agent(name) VALUES("Scarlet Lee Celadon");
-INSERT INTO agent(name) VALUES("Lunara Crownguard");
+
 --insert customer info (id auto increments)--
 INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
 VALUES ("Carlo Mendoza", TRUE, TRUE, "Marikina City", 1);
 INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
 VALUES ("Gener Lopez", TRUE, TRUE, "Quezon City", 2);
 INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
-VALUES ("Christian Chan", TRUE, TRUE, "Manila City", 3);
+VALUES ("Christian Chan", TRUE, TRUE, "Manila City", 2);
 INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
-VALUES ("Tim 'Avicii' Bergling", TRUE, TRUE, "Stockholm, Sweden", 4);
+VALUES ("Tim Bergling", TRUE, TRUE, "Stockholm, Sweden", 3);
 INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
-VALUES ("Kyrre 'Kygo' Gorvell-Dahl", TRUE, TRUE, "Bergen, Norway", 5);
+VALUES ("Kyrre Gorvell-Dahl", TRUE, FALSE, "Bergen, Norway", 1);
 INSERT INTO customer(name, isBuyer, isRecipient, address, agent_id)
-VALUES ("Dara 'Tigerlily' Hayes", TRUE, TRUE, "Australia", 5);
+VALUES ("Dara Hayes", FALSE, TRUE, "Sydney, Australia", 3);
+
 --insert orders--
 INSERT INTO orders(customer_id, order_date, amount_due)
-VALUES (1, '2017-05-09', 6900);
+VALUES (1, '2017-05-12', 6900);
 INSERT INTO orders(customer_id, order_date, amount_due)
-VALUES (2, '2017-05-09', 4200);
+VALUES (2, '2017-05-12', 4200);
 INSERT INTO orders(customer_id, order_date, amount_due)
-VALUES (3, '2017-05-09', 3000);
+VALUES (3, '2017-05-13', 3000);
 INSERT INTO orders(customer_id, order_date, amount_due)
-VALUES (5, '2017-05-10', 12700);
+VALUES (4, '2017-05-13', 12700);
 INSERT INTO orders(customer_id, order_date, amount_due)
-VALUES (6, '2017-05-10', 29600);
+VALUES (5, '2017-05-14', 29600);
+
 --insert deliveries--
 INSERT INTO delivery(order_no, recipient_id, delivery_date, delivery_time, isGift)
 VALUES (1, 1, '2017-05-15', '12:30:00', FALSE);
 INSERT INTO delivery(order_no, recipient_id, delivery_date, delivery_time, isGift)
-VALUES (2, 2, '2017-05-16', '14:30:00', FALSE);
+VALUES (2, 2, '2017-05-15', '14:30:00', FALSE);
 INSERT INTO delivery(order_no, recipient_id, delivery_date, delivery_time, isGift)
-VALUES (3, 3, '2017-05-17', '15:00:00', FALSE);
+VALUES (3, 3, '2017-05-16', '15:00:00', FALSE);
 INSERT INTO delivery(order_no, recipient_id, delivery_date, delivery_time, isGift)
-VALUES (4, 6, '2017-05-17', '06:45:00', FALSE);
+VALUES (4, 4, '2017-05-16', '06:45:00', FALSE);
 INSERT INTO delivery(order_no, recipient_id, delivery_date, delivery_time, isGift)
-VALUES (5, 3, '2017-05-17', '08:30:00', TRUE);
+VALUES (5, 6, '2017-05-17', '08:30:00', TRUE);
+
 --insert requests from orders--
 INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
 VALUES (1, "Flipper", "Red", "~Carlo~", 1, 0.00, 745);
@@ -127,6 +281,7 @@ INSERT INTO request(order_no, product_type, color, personalization, quantity, di
 VALUES (4, "Filer", "Green", "~Pewds~", 1, 0.00, 595);
 INSERT INTO request(order_no, product_type, color, personalization, quantity, discount, total_amount)
 VALUES (5, "Shifter", "Blue", "~Jack~", 1, 0.00, 595);
+
 --insert item_id for each request--
 INSERT INTO request_item(order_no, product_type, item_id)
 VALUES (1, "Flipper", 1);
