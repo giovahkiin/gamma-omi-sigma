@@ -17,10 +17,10 @@
 		</div>
 		<div id = "Table">
 			<table>
-				<tr> 
+				<tr>
 					<th> Date </th>
 				</tr>
-				<tr> 
+				<tr>
 					<td> Date </td>
 					<td> Agent </td>
 					<td> Customer Number </td>
@@ -35,6 +35,15 @@
 					<td> (x) </td>
 				</tr>
 			</table>
+
+			<?php
+			 	include 'config.php';
+				$sqlresult = $conn->query("SELECT orders.order_date AS 'Date', agent.name AS 'Agent', customer.customer_name AS 'Customer Name', orders.order_no AS 'Order Number' FROM orders, agent, customer WHERE orders.customer_id = customer.customer_id AND customer.agent_id = agent.agent_id;");
+				// Amount stuff still missing
+	            echo sql_to_html_table($sqlresult, $delim = "\n");
+				$conn->close();
+			 ?>
+
 		</div>
 	</body>
 </html>
