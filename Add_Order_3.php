@@ -89,7 +89,7 @@
 
                         if ($conn->query($sql) === TRUE) {
                             echo "Order successful!";
-                            header("Location:Catalog.php");
+                            header("Location:Add_Order_2.php");
                             exit; // <- don't forget this!
                         } else {
                             echo "Error: " . $sql . "<br>" . $conn->error;

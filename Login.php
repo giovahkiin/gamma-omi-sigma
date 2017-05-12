@@ -10,7 +10,7 @@
 			<div id = "Logo">
 				<img width = "1188" height = "297" src = "logo.png">
 			</div>
-			<form>
+			<form action="Main_Menu.php">
 				<div class = "Input">
 					<div id = "Username">
 						<input class = "text" id = "user" type = "text" name = "username" placeholder = "Username">
