@@ -32,7 +32,7 @@
                     <input type="text" name="orderID" placeholder="Order ID"> <br> -->
 
                     Customer ID:<br>
-                    <input type="text" name="customerID" placeholder="Customer ID"><br>
+                    <input type="text" name="customerID" placeholder="ID" required><br>
 
                     <!-- Assigned Agent ID:<br>
                     <input type="text" name="agentID" placeholder="Agent ID"><br> -->
@@ -41,14 +41,14 @@
                 <div id= "right">
                     <div id="rightforms">
                     Recipient Name:<br>
-                    <input type="text" name="recFName" placeholder="First Name">
-                    <input type="text" name="recLName" placeholder="Last Name"><br>
+                    <input type="text" name="recFName" placeholder="First Name" required>
+                    <input type="text" name="recLName" placeholder="Last Name" required><br>
 
                     Delivery Address:<br>
-                    <input type="text" name="address" placeholder="Address"><br>
+                    <input type="text" name="address" placeholder="Address" required><br>
 
                     Delivery Schedule:<br>
-                        <input type="date" name="date" placeholder="DD/MM/YY"><br>
+                        <input type="date" name="date" placeholder="MM/DD/YY"><br>
 
                     Time:<br>
                         <input type="time" name="deliv_time" placeholder="HH:MM:SS"><br>

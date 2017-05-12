@@ -61,23 +61,12 @@
                         <input type="radio" name="color" value="black"> Black<br>
                     </div>
 
-                    Personalization Options:<br>
+                    Personalization:<br>
                     <!-- This too is a placeholder since drop down buttons require css-->
-                    <input type = "text" name ="Options" placeholder ="Options"><br>
-
-                    Dimensions:<br>
-                    <input type="text" name="length" value="Length">
-                    <input type="text" name="width" value="Width">
-                    <input type="text" name="height" value="Height">
-
-                    Number of Slots: <br>
-                    <input type="number" name="slots" value="0" min="1" max="99">
+                    <input type = "text" name ="Options" placeholder ="Personalization"><br>
 
                     Quantity:
                     <input type = "number" name="Quantity" value ="0" min="1" max = "99"> <br>
-
-                    Price<br>
-                    </div>
 
                     <div id = "rightSubmit">
                     <input  type= submit value ="Submit" >
@@ -87,36 +76,25 @@
 
                 <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        // $orderID = test_input($_SESSION['orderID']);
-                        $customerID = test_input($_SESSION['customerID']);
-                        $recFName = test_input($_SESSION['recFName']);
-                        $recLName = test_input($_SESSION['recLName']);
-                        $address = test_input($_SESSION['address']);
-                        $date = test_input($_SESSION['date']);
-                        $deliv_time = test_input($_SESSION['deliv_time']);
-                        $isGift = test_input($_SESSION['isGift']);
-
                         $Type =  test_input($_POST["Type"]);
                         $color =  test_input($_POST["color"]);
                         $Options =  test_input($_POST["Options"]);
                         $Quantity =  test_input($_POST["Quantity"]);
 
+                        $sql ="INSERT INTO request (order_no, product_type, color, personalization, quantity, total_amount)
+                        VALUES ((SELECT order_no FROM orders ORDER BY order_no DESC LIMIT 1), '".$Type."', '".$color."', '".$Options."', $Quantity, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = '".$Type."') * $Quantity) - (SELECT (SELECT discount FROM catalog WHERE product_type = '".$Type."') * $Quantity))));";
 
+                        //does not subtract from stock yet
 
-
-                        $sql2 ="INSERT INTO request (order_no, product_type, color, personalization, quantity, discount, total_amount)
-                        VALUES ((SELECT order_no FROM orders ORDER BY order_no DESC LIMIT 1), '".$Type."', '".$color."', '".$Options."', ".$Quantity.", 0.00, (SELECT price from catalog where product_type = '".$Type."') * quantity);";
-
-                        if ($conn->query($sql2) === TRUE) {
+                        if ($conn->query($sql) === TRUE) {
                             echo "<script type = 'text/javascript'>
                                     alert ('Order successful!');
                                 </script>";
                             header("Location:Catalog.php");
                             exit; // <- don't forget this!
                         } else {
-                            echo "Error: " . $sql2 . "<br>" . $conn->error;
+                            echo "Error: " . $sql . "<br>" . $conn->error;
                         }
-
         				$conn->close();
                     }
                 ?>

@@ -35,7 +35,8 @@
 							<ul>
 								<li> <a href = "./Add_Product.php"> Add Product </a> </li>
 								<li> <a href = "./Add_Order.php"> Add Order </a> </li>
-								<li> <a href = "./Update_Item.php"> Update Product </a> </li>
+								<li> <a href = "./Update_Product.php"> Update Product </a> </li>
+								<li> <a href = "./Update_Stock.php"> Update Stock </a> </li>
 							</ul>
 					</div>
 				</ul>

@@ -1,0 +1,135 @@
+@font-face
+{
+    font-family: PrintClearly;
+    src: url("PrintClearly.otf");
+}
+
+@font-face
+{
+    font-family: PrintBold;
+    src: url("PrintBold.otf");
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* For the title bar*/
+
+#BarList li
+{
+    list-style-type: none;
+    display: inline;
+    margin-right: 10px;
+    margin-left: 25px;
+}
+
+#BarList li a
+{
+    text-decoration: none;
+    text-decoration-color: none;
+    padding: 15px 10px;
+    color: white;
+}
+
+#BarList a:visited 
+{
+    color: white;
+}
+
+#BarList li a:hover
+{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Bar
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-image: url("Barground.png");
+    background-size: 200px;
+    font-family: PrintBold, sans-serif;
+    color: white;
+    font-size: 30px;
+}
+
+/* */
+
+#container{
+    width: 100%;
+    height: 50%
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Header{
+    padding: 4px;
+    text-align: right;
+    background-color: #66CCFF;
+    color: white;
+    font-family: PrintBold;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-right: 50px;    
+    padding-bottom: 17px;
+}
+#content{
+    background-color: white;
+    padding: 24px;
+    padding-bottom: 25%;
+}
+
+#left{
+    line-height: 200%;
+    float: left;
+    width: 50%;
+}
+#leftforms{
+    float: left;
+}
+#buttons{
+    float: right;
+    width: 25%;
+}
+#rightforms{
+    float: left;    
+    width: 50%;
+}
+#rightSubmit{
+    float:right;
+    width: 50%;
+}
+
+.content
+{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.content, input
+{
+    font-family: PrintClearly;
+    font-size: 25px;
+}
+
+.content input
+{
+    border: 2px solid #AAAAAA;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#footer
+{
+    text-align: center;
+    padding-right: 30px;
+    float: right;
+}
+
+#footer input
+{
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+}

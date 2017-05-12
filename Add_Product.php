@@ -54,7 +54,7 @@
                 <div id="right">
                         <div id="rightforms">
                         Personalization Limit:<br>
-                        <input type = "number" name="pLimit" value="1" min="1" max="10"> <br>
+                        <input type = "number" name="pLimit" value="0" min="1" max="10"> <br>
 
                         Suggested Retail Price:<br>
                         <input type="text" name="srp" placeholder = SRP required>
