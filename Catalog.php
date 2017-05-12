@@ -12,6 +12,7 @@
             $_SESSION['recLName'] = $_POST['recLName'];
             $_SESSION['address'] = $_POST['address'];
             $_SESSION['date'] = $_POST['date'];
+			$_SESSION['deliv_time'] = $_POST['deliv_time'];
             $_SESSION['isGift'] = $_POST['isGift'];
         ?>
 	</head>

@@ -94,6 +94,7 @@
                         $recLName = test_input($_SESSION['recLName']);
                         $address = test_input($_SESSION['address']);
                         $date = test_input($_SESSION['date']);
+                        $deliv_time = test_input($_SESSION['deliv_time']);
                         $isGift = test_input($_SESSION['isGift']);
 
                         $Type =  test_input($_POST["Type"]);
@@ -101,22 +102,28 @@
                         $Options =  test_input($_POST["Options"]);
                         $Quantity =  test_input($_POST["Quantity"]);
 
+                        if($isGift = "yes") {
+                            $isGift = 1;
+                        } else {
+                            $isGift = 0;
+                        }
+
                         $sql1 ="INSERT INTO orders (customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
-                        VALUES (" .$orderid.", ".$isGift.", CONCAT('".$recFName."', ' ', '".$recLName ."'), ".$address.", NOW(), ".$date.", ".$deliv_time.");";
+                        VALUES (" .$customerID.", ".$isGift.", CONCAT('".$recFName."', ' ', '".$recLName ."'), '".$address."', NOW(), '".$date."', '".$deliv_time."');";
 
                         if ($conn->query($sql1) === TRUE) {
-                            echo "sql1 successfully";
+                            // echo "sql1 successfully";
                         } else {
-                            echo "Error: " . $sql . "<br>" . $conn->error;
+                            echo "Error: " . $sql1 . "<br>" . $conn->error;
                         }
 
                         $sql2 ="INSERT INTO request (order_no, product_type, color, personalization, quantity, discount, total_amount)
-                        VALUES (".$orderID.", ''".$Type."'', ''".$color."', '".$Options."', ".$Quantity.", 0.00, (SELECT price from catalog where product_type = '".$Type."') * quantity);";
+                        VALUES (".$orderID.", '".$Type."', '".$color."', '".$Options."', ".$Quantity.", 0.00, (SELECT price from catalog where product_type = '".$Type."') * quantity);";
 
                         if ($conn->query($sql2) === TRUE) {
-                            echo "sql2 successfully";
+                            echo "Order successful!";
                         } else {
-                            echo "Error: " . $sql . "<br>" . $conn->error;
+                            echo "Error: " . $sql2 . "<br>" . $conn->error;
                         }
 
         				$conn->close();

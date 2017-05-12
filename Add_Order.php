@@ -51,6 +51,7 @@
                         <input type="date" name="date" placeholder="DD/MM/YY"><br>
 
                     Time:<br>
+                        <input type="time" name="deliv_time" placeholder="HH:MM:SS"><br>
                     </div>
 
                     Is it a Gift?<br>
