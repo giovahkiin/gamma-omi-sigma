@@ -20,9 +20,9 @@
 
 		<div id = "MenuItems">
 			<ul>
-				<li> <a href = "./Product_Page.php"> Product 1 </a> </li>
-				<li> <a href = "./Product_Page.php"> Product 2 </a> </li>
-				<li> <a href = "./Product_Page.php"> Product 3 </a> </li>
+				<li> <a href = "./Product_Page.php"> Folders </a> </li>
+				<li> <a href = "./Product_Page.php"> Pen Organizers </a> </li>
+				<li> <a href = "./Product_Page.php"> Planners </a> </li>
 			</ul>
 		</div>
 	</body>

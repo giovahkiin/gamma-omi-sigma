@@ -73,7 +73,7 @@
                     $color =  test_input($_POST["color"]);
                     $stock =  test_input($_POST["stock"]);
 
-                $sql ="UPDATE stock SET quantity = $stock, WHERE product_line = '".$productLine."' AND product_type = '".$productType."' AND color = '".$color."';";
+                $sql ="UPDATE stock SET quantity = $stock, last_update = NOW() WHERE product_type = '".$productType."' AND color = '".$color."';";
 
                  if ($conn->query($sql) === TRUE) {
                         echo "Stock for ". $productType . " has been updated successfully.<br>";
