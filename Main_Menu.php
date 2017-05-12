@@ -24,7 +24,7 @@
 
 							<ul class = "StatList">
 								<li> <a href = "./Inventory.php"> Inventory </a> </li>
-								<li> <a href = "./Agents.php"> Agents </a> </li>
+								<li> <a href = "./Transactions.php"> Agent Transactions </a> </li>
 								<li> <a href = "./Reports.php"> Reports </a> </li>
 							</ul>
 
