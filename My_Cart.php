@@ -19,9 +19,14 @@
 		</div>
 		</div>
 		<div id = "Table">
-            
-			<table class = "center">
-				<tr> 
+			<?php
+			 	include 'config.php';
+				$sqlresult = $conn->query("SELECT DISTINCT request.product_type AS 'Item Name', request.color AS 'Color', request.personalization AS 'Personalization', request.quantity AS 'Quantity', request.total_amount AS 'Total Amount' from request, orders where request.order_no = (SELECT order_no from orders ORDER BY order_no DESC LIMIT 1);");
+	            echo sql_to_html_table($sqlresult, $delim = "\n");
+				$conn->close();
+			 ?>
+			<!-- <table class = "center">
+				<tr>
 					<th> Product </th>
 					<th> Type </th>
 					<th> Color </th>
@@ -48,7 +53,7 @@
                     <td>Amount Due:</td>
                     <td>Insert Price</td>
                 </tfoot>
-			</table>
+			</table> -->
 		</div>
 	</body>
 </html>
