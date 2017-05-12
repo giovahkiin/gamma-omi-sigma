@@ -10,6 +10,7 @@ CREATE TABLE catalog (
 	width					FLOAT(2) DEFAULT 0.00,
 	height					FLOAT(2) DEFAULT 0.00,
 	number_of_slots			INT DEFAULT 3,
+	features 				TEXT NOT NULL,
 	price					FLOAT(2) DEFAULT 0.00,
 	discount				FLOAT(2) DEFAULT 0.00,
 	CHECK (personalization_limit between 1 and 10),
@@ -29,24 +30,6 @@ CREATE TABLE stock (
 	FOREIGN KEY (product_type) REFERENCES catalog(product_type) ON DELETE RESTRICT,
 	FOREIGN KEY (color) REFERENCES color(color_name) ON DELETE RESTRICT,
 	CHECK (quantity between 0 and 99)
-);
-
-CREATE TABLE folder_features (
-	folder_type				VARCHAR(20) NOT NULL,
-	features  				VARCHAR(255) NOT NULL,   
-	FOREIGN KEY (folder_type) REFERENCES catalog(product_type) ON DELETE RESTRICT    
-);
-
-CREATE TABLE organizer_features (
-	organizer_type			VARCHAR(20) NOT NULL,
-	features  				VARCHAR(255) NOT NULL,   
-	FOREIGN KEY (organizer_type) REFERENCES catalog(product_type) ON DELETE RESTRICT    
-);
-
-CREATE TABLE planner_features (
-	planner_type			VARCHAR(20) NOT NULL,
-	features  				VARCHAR(255) NOT NULL,   
-	FOREIGN KEY (planner_type) REFERENCES catalog(product_type) ON DELETE RESTRICT    
 );
 
 CREATE TABLE agent (

@@ -1,16 +1,15 @@
 --add product (automatically adds 1 stock of that item in all colors)
---add features?
 --update product (replaces price and discount)
-INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, price)
-VALUES("Flipper", "Folder", 8, 13.5, 10.25, 0.75, NULL, 745);
-INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, price)
-VALUES("Slinger", "Pen Organizer", 5, NULL, NULL, NULL, 6, 95);
-INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, price)
-VALUES("Doodler", "Planner", 8,  8.5, 6, 0.75, NULL, 595);
-INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, price)
-VALUES("Filer", "Folder", 8,  14, 11, 1.5, NULL, 995);
-INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, price)
-VALUES("Shifter", "Pen Organizer", 8, NULL, NULL, NULL, 15, 595);
+INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, features, price)
+VALUES("Flipper", "Folder", 8, 13.5, 10.25, 0.75, NULL, "reversible, slim and compact, leatherette material", 745);
+INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, features, price)
+VALUES("Slinger", "Pen Organizer", 5, NULL, NULL, NULL, 6, "magnetic lock, dual ribbon straps with velcro, water repellent", 95);
+INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, features, price)
+VALUES("Doodler", "Planner", 8,  8.5, 6, 0.75, NULL, "smyth sewn hardbound, premium120 gsm paper, monthly spread", 595);
+INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, features, price)
+VALUES("Filer", "Folder", 8,  14, 11, 1.5, NULL, "multi-function portfolio organizer, leather exterior, magnetic flap", 995);
+INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, features, price)
+VALUES("Shifter", "Pen Organizer", 8, NULL, NULL, NULL, 15, "triple zipper, expandable bin, velcro locked pockets", 295);
 
 --initial data--
 INSERT INTO color(color_name) VALUES("Red");
@@ -109,42 +108,6 @@ INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Shifter", "Pink", 1, NOW());
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Shifter", "Black", 1, NOW());
-
---insert folder features--
-INSERT INTO folder_features(folder_type, features)
-VALUES("Flipper", "reversible");
-INSERT INTO folder_features(folder_type, features)
-VALUES("Flipper", "slim and compact");
-INSERT INTO folder_features(folder_type, features)
-VALUES("Flipper", "leatherette material");
-INSERT INTO folder_features(folder_type, features)
-VALUES("Filer", "multi-function portfolio organizer");
-INSERT INTO folder_features(folder_type, features)
-VALUES("Filer", "3-ring binder");
-INSERT INTO folder_features(folder_type, features)
-VALUES("Filer", "sleeves for papers");
-
---insert pen organizer features--
-INSERT INTO organizer_features(organizer_type, features)
-VALUES("Slinger", "magnetic lock");
-INSERT INTO organizer_features(organizer_type, features)
-VALUES("Slinger", "dual ribbon straps with velcro");
-INSERT INTO organizer_features(organizer_type, features)
-VALUES("Slinger", "water repellent");
-INSERT INTO organizer_features(organizer_type, features)
-VALUES("Shifter", "triple zipper");
-INSERT INTO organizer_features(organizer_type, features)
-VALUES("Shifter", "expandable bin");
-INSERT INTO organizer_features(organizer_type, features)
-VALUES("Shifter", "velcro locked pockets");
-
---insert planner features--
-INSERT INTO planner_features(planner_type, features)
-VALUES("Doodler", "smyth sewn hardbound");
-INSERT INTO planner_features(planner_type, features)
-VALUES("Doodler", "premium 120 gsm paper");
-INSERT INTO planner_features(planner_type, features)
-VALUES("Doodler", "monthly spread");
 
 --insert agent info (id auto increments)--
 INSERT INTO agent(name) VALUES("Axis Snowdrop");
