@@ -34,7 +34,7 @@
 	color: white;
 }
 
-#BarList a:visited 
+#BarList a:visited
 {
 	color: white;
 }
@@ -102,4 +102,17 @@
 #Title, #MenuItems
 {
 	text-align: center;
+}
+
+#footer
+{
+    text-align: center;
+    padding-right: 30px;
+    float: right;
+}
+
+#footer input
+{
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
 }

@@ -29,9 +29,11 @@
 			</ul>
 		</div>
 
-		<form action="Main_Menu.php">
-		    <input type="submit" value="Checkout" />
-		</form>
+		<div id=footer>
+			<form action="Main_Menu.php">
+			    <input type="submit" value="Checkout" />
+			</form>
+		</div>
 
 	</body>
 </html>
