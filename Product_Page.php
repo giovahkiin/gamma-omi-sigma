@@ -90,7 +90,7 @@
                             echo "<script type = 'text/javascript'>
                                     alert ('Order successful!');
                                 </script>";
-                            header("Location:Catalog.php");
+                            header("Location:Add_Order_2.php");
                             exit; // <- don't forget this!
                         } else {
                             echo "Error: " . $sql . "<br>" . $conn->error;
