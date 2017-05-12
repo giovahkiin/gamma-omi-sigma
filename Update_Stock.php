@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Update Stock </title>
-        <link rel ="stylesheet" type= "text/css" href="UpdStockStyle.css">
+        <link rel ="stylesheet" type= "text/css" href="Update_Stock.css">
         <?php include 'config.php'; ?>
     </head>
 
@@ -20,21 +20,21 @@
                     <h1>Update Stock</h1>
                 </div>
             </div>
-            
+
             <div class = "content">
                 <div id = "left">
                         <div id="leftforms">
                         <form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="POST">
-                    
+
                         Product Line:<br>
                         <input type="text" name="productLine" placeholder ="Line"><br>
-                    
+
                         Type:<br>
                         <input type="text" name="productType" placeholder="Type"><br>
 
                         <!-- </form> -->
                         </div>
-                        
+
                         <!-- Might replace to drop down buttons-->
                         <div id="buttons">
                         <!-- <forms> -->
@@ -48,17 +48,18 @@
                         <input type="radio" name="color" value="black"> Black<br>
                         <!-- </forms> -->
                         </div>
-                    
+
                 </div>
-                
+
                 <div id="right">
-                    
+
                         <div id="rightforms">
                         <!-- <form> -->
+                        Current Stock: <br> <br>
                         <input type="number" name="stock" value = "0" min ="0" max="99"> <br>
                         <!-- </form>  -->
                         </div>
-                
+
                         <div id="submit">
 
                         </div>
@@ -87,7 +88,7 @@
             <div id = "footer">
                 <!-- <form action = "./Main_Menu.php"> -->
                 <input type= "submit" value="Update">
-                </form> 
+                </form>
             </div>
         </div>
     </body>
