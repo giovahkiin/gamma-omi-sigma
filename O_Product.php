@@ -26,7 +26,7 @@
 		<div id = "Table">
 			<?php
 	 			 	include 'config.php';
-	 				$sqlresult = $conn->query("SELECT request.product_type AS 'Item Name', request.color AS 'Color', request.quantity as 'Quantity Ordered', request.total_amount AS 'Total Amount' FROM request;");
+	 				$sqlresult = $conn->query("SELECT request.product_type AS 'Item Name', request.color AS 'Color', SUM(request.quantity) as 'Quantity Ordered', SUM(request.total_amount) AS 'Total Amount' FROM request GROUP BY request.product_type, request.color");
 		            echo sql_to_html_table($sqlresult, $delim = "\n");
 					$conn->close();
 			 	?>
