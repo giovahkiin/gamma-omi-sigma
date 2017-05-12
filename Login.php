@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Login Page </title>
+		<title> Pixie Dust: Login </title>
 		<link rel = "stylesheet" type = "text/css" href = "Login.css">
 		<link href = "PrintClearly.otf" rel = "stylesheet">
 	</head>

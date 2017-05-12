@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Add Item </title>
+        <title>Add Product</title>
 	    <link rel="stylesheet" type="text/css" href="Add_Product.css"/>
         <?php include 'config.php';?>
     </head>
@@ -61,7 +61,7 @@
 
                 <!-- <div id="right">
                         <div id="rightforms">
-                        
+
                 </div> -->
                 <div id = "footer">
                     <div id="submit">

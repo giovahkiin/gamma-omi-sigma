@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title> Inventory </title>
+		<title> My Cart </title>
 	    <link rel="stylesheet" type="text/css" href="My_Cart.css"/>
 	</head>
 	<body>
@@ -15,7 +15,7 @@
 		<div class = "header">
 		<div id = "Title">
 			<input type = "text" placeholder = "search">
-			<h1> Inventory </h1>
+			<h1> My Cart </h1>
 		</div>
 		</div>
 		<div id = "Table">

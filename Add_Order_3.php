@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Product Page</title>
+        <title> Add Order </title>
         <link rel ="stylesheet" type= "text/css" href="Product_Page.css">
         <?php
             include 'config.php';

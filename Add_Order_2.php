@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title> Product Catalog </title>
+		<title> Add Order </title>
 		<link rel = "stylesheet" type = "text/css" href = "Catalog.css"/>
 		<?php
             include 'config.php';
@@ -18,7 +18,7 @@
        	</div>
 
 		<div id = "Title">
-			<h1> Product Catalog </h1>
+			<h1> Select a line. </h1>
 		</div>
 
 		<div id = "MenuItems">

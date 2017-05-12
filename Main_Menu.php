@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title> Main Menu </title>
+		<title> Pixie Dust </title>
 		<link rel = "stylesheet" type = "text/css" href = "Main_Menu.css">
 	</head>
 	<body>
