@@ -76,7 +76,6 @@
 
             <div id = "footer">
                 <!-- <form> -->
-                <input type="submit" value ="Delete">
                 <input type= "submit" value="Update">
                 </form> 
             </div>

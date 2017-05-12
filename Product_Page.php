@@ -87,9 +87,7 @@
                         //does not subtract from stock yet
 
                         if ($conn->query($sql) === TRUE) {
-                            echo "<script type = 'text/javascript'>
-                                    alert ('Order successful!');
-                                </script>";
+                            echo "Order successful!";
                             header("Location:Catalog.php");
                             exit; // <- don't forget this!
                         } else {
