@@ -80,7 +80,7 @@
                                 echo "<script type = 'text/javascript'>
                                         alert ('DEBUGpart1 success');
                                     </script>";
-                                header("Location:Catalog.php");
+                                header("Location:Add_Order_2.php");
                                 exit;
                             } else {
                                 echo "Error: " . $sql1 . "<br>" . $conn->error;
