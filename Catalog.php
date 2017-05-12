@@ -3,12 +3,9 @@
 	<head>
 		<title> Product Catalog </title>
 		<link rel = "stylesheet" type = "text/css" href = "Catalog.css"/>
-		<?php
-            include 'config.php';
-			session_start();
-        ?>
 	</head>
 	<body>
+
 		<div class = "Bar">
             <ul id = "BarList">
                 <li id = "Name"> User Name Here </li>
@@ -23,15 +20,10 @@
 
 		<div id = "MenuItems">
 			<ul>
-				<li> <a href = "./Product_Page.php?line=Folder"> Folders </a> </li>
-				<li> <a href = "./Product_Page.php?line=PenOrg"> Pen Organizers </a> </li>
-				<li> <a href = "./Product_Page.php?line=Planner"> Planners </a> </li>
+				<li> <a href = "./Product_Page.php"> Product 1 </a> </li>
+				<li> <a href = "./Product_Page.php"> Product 2 </a> </li>
+				<li> <a href = "./Product_Page.php"> Product 3 </a> </li>
 			</ul>
 		</div>
-
-		<form action="Main_Menu.php">
-		    <input type="submit" value="Checkout" />
-		</form>
-
 	</body>
 </html>

@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Add Order</title>
+        <title>Add_Order</title>
+	    <link rel="stylesheet" type="text/css" href="Add_Order.css"/>
         <?php
             include 'config.php';
             session_start();
@@ -11,35 +12,33 @@
     </head>
 
     <body>
+
         <div id="container">
-        <div id = "Bar">
-            <ul>
-                <li> <a href = "./Main_Menu.php"> < Main Menu </a> </li>
-                <li> User Name Here </li>
-                <li> <a href = "./Login.php"> Log Out </a></li>
-            </ul>
-        </div>
-            <div id="header">
+
+            <div class = "Bar">
+                <ul id = "BarList">
+                    <li id = "Name"> User Name Here </li>
+                    <li> <a href = "./Main_Menu.php"> Main Menu </a> </li>
+                    <li> <a href = "./Login.php"> Log Out </a> </li>
+                </ul>
+            </div>
+
+            <div id="Header">
                 <div id= "AddOrder">
                     <h1>Add Order</h1>
                 </div>
             </div>
 
-            <div id ="content">
+            <div class ="content">
                 <div id = "left">
                     <form method="POST" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>>
-                    <!-- Order ID:<br>
-                    <input type="text" name="orderID" placeholder="Order ID"> <br> -->
-
                     Customer ID:<br>
-                    <input type="text" name="customerID" placeholder="ID" required><br>
-
-                    <!-- Assigned Agent ID:<br>
-                    <input type="text" name="agentID" placeholder="Agent ID"><br> -->
+                    <input type="text" name="customerID" placeholder="Customer ID" required><br>
                 </div>
 
                 <div id= "right">
                     <div id="rightforms">
+                    <!-- <form> -->
                     Recipient Name:<br>
                     <input type="text" name="recFName" placeholder="First Name" required>
                     <input type="text" name="recLName" placeholder="Last Name" required><br>
@@ -50,20 +49,28 @@
                     Delivery Schedule:<br>
                         <input type="date" name="date" placeholder="MM/DD/YY"><br>
 
-                    Time:<br>
-                        <input type="time" name="deliv_time" placeholder="HH:MM:SS"><br>
+                        Time:<br>
+                            <input type="time" name="deliv_time" placeholder="HH:MM:SS"><br>
+                    <!-- </form> -->
                     </div>
 
                     Will this be a gift?<br>
                     <input type="radio" name="isGift" value="1">Yes<br>
                     <input type="radio" name="isGift" value="0">No<br>
 
-                    <div id="submit">
-                        <input type="submit" value ="Proceed">
-                        </form>
                     </div>
 
-                    <?php
+                </div>
+            </div>
+            <div id="footer">
+                <div id="submit">
+                    <input type="submit" value ="Proceed">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <?php
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $customerID = $_POST['customerID'];
                             $recFName = $_POST['recFName'];
@@ -88,8 +95,5 @@
                         }
                      ?>
 
-                </div>
-            </div>
-        </div>
     </body>
 </html>

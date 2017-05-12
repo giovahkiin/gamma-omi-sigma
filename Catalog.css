@@ -1,0 +1,105 @@
+@font-face
+{
+	font-family: PrintClearly;
+	src: url("PrintClearly.otf");
+}
+
+@font-face
+{
+	font-family: PrintBold;
+	src: url("PrintBold.otf");
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* For the title bar*/
+
+#BarList li
+{
+	list-style-type: none;
+	display: inline;
+	margin-right: 10px;
+	margin-left: 25px;
+}
+
+#BarList li a
+{
+	text-decoration: none;
+	text-decoration-color: none;
+	padding: 15px 10px;
+	color: white;
+}
+
+#BarList a:visited 
+{
+	color: white;
+}
+
+#BarList li a:hover
+{
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Bar
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 50px;
+	background-image: url("Barground.png");
+	background-size: 200px;
+	font-family: PrintBold, sans-serif;
+	color: white;
+	font-size: 30px;
+}
+
+/* For the menu options */
+
+#Title h1
+{
+	display: block;
+	font-family: PrintBold;
+	font-size: 75px;
+	color: white;
+	background-color: #66CCFF;
+	border: 1px solid #66CCFF;
+	border-radius: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 400px;
+	margin-right: 400px;
+	overflow-x: hidden;
+}
+
+#MenuItems li
+{
+	display: inline-block;
+	list-style-type: none;
+	border: 1px solid #333;
+	border-radius: 25px;
+	padding: 25px 25px 25px 25px;
+	margin: 75px 25px 25px 25px;
+	font-family: PrintBold;
+	font-size: 35px;
+	color: #555555;
+}
+
+#MenuItems a
+{
+	color: #555555;
+	text-decoration: none;
+	text-decoration-color: none;
+}
+
+#MenuItems li:hover
+{
+	text-decoration: underline;
+}
+
+#Title, #MenuItems
+{
+	text-align: center;
+}

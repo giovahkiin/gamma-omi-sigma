@@ -17,9 +17,7 @@
 			</div>
 			<div class = "Menu">
 				<ul id = "MenuItems">
-					<!-- <div id = "Catalog">
-						<li> <a href = "./Catalog.php"> Catalog </a> </li>
-					</div> -->
+					<li> <a href = "./Catalog.php"> Catalog </a> </li>
 					<li> <a href = "./My_Cart.php"> My Cart </a> </li>
 
 							<ul class = "StatList">
