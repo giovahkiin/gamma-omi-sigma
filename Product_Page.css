@@ -34,7 +34,7 @@
     color: white;
 }
 
-#BarList a:visited 
+#BarList a:visited
 {
     color: white;
 }
@@ -134,4 +134,60 @@ h5{
     float: right;
     font-family: PrintClearly;
     font-size: 20px;
+}
+
+table
+{
+    border-collapse: collapse;
+    width: 80%;
+    border: 2px solid #AAAAAA;
+}
+
+th
+{
+    text-align: left;
+    background-color: #66CCFF;
+    color: white;
+}
+
+th, td
+{
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+
+tfoot
+{
+    background-color: #FFBFE0;
+    color: white;
+}
+
+#Table
+{
+    margin-top: 40px;
+    word-spacing: 8px ;
+    text-align: center;
+}
+
+tr, th
+{
+    text-align: center;
+    table-layout: center;
+}
+
+th
+{
+    font-family: PrintBold;
+    font-size: 25px;
+}
+
+tr
+{
+    font-family: PrintClearly;
+    font-size: 25px;
+}
+
+table
+{
+    margin: auto;
 }
