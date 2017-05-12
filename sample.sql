@@ -1,5 +1,3 @@
---add product (automatically adds 1 stock of that item in all colors)
---update product (replaces price and discount)
 INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, features, price)
 VALUES("Flipper", "Folder", 8, 13.5, 10.25, 0.75, NULL, "reversible, slim and compact, leatherette material", 745);
 INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, features, price)
@@ -11,7 +9,6 @@ VALUES("Filer", "Folder", 8,  14, 11, 1.5, NULL, "multi-function portfolio organ
 INSERT INTO catalog(product_type, product_line, personalization_limit, length, width, height, number_of_slots, features, price)
 VALUES("Shifter", "Pen Organizer", 8, NULL, NULL, NULL, 15, "triple zipper, expandable bin, velcro locked pockets", 295);
 
---initial data--
 INSERT INTO color(color_name) VALUES("Red");
 INSERT INTO color(color_name) VALUES("Orange");
 INSERT INTO color(color_name) VALUES("Yellow");
@@ -21,9 +18,6 @@ INSERT INTO color(color_name) VALUES("Purple");
 INSERT INTO color(color_name) VALUES("Pink");
 INSERT INTO color(color_name) VALUES("Black");
 
---when a product is added to catalog, 1 stock of that item is added in each color
---last_update is now()
---update stock gets current stock whered date == now() then add sa quantity na ilalagay ng user then last update=now
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Flipper", "Red", 1, NOW());
 INSERT INTO stock(product_type, color, quantity, last_update)
@@ -40,7 +34,7 @@ INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Flipper", "Pink", 1,  NOW());
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Flipper", "Black", 1,  NOW());
---
+
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Slinger", "Red", 1,  NOW());
 INSERT INTO stock(product_type, color, quantity, last_update)
@@ -57,7 +51,7 @@ INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Slinger", "Pink", 1,  NOW());
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Slinger", "Black", 1,  NOW());
---
+
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Doodler", "Red", 1,  NOW());
 INSERT INTO stock(product_type, color, quantity, last_update)
@@ -74,7 +68,7 @@ INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Doodler", "Pink", 1,  NOW());
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Doodler", "Black", 1,  NOW());
---
+
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Filer", "Red", 1,  NOW());
 INSERT INTO stock(product_type, color, quantity, last_update)
@@ -91,7 +85,7 @@ INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Filer", "Pink", 1, NOW());
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Filer", "Black", 1, NOW());
---
+
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Shifter", "Red", 1, NOW());
 INSERT INTO stock(product_type, color, quantity, last_update)
@@ -109,12 +103,10 @@ VALUES("Shifter", "Pink", 1, NOW());
 INSERT INTO stock(product_type, color, quantity, last_update)
 VALUES("Shifter", "Black", 1, NOW());
 
---insert agent info (id auto increments)--
 INSERT INTO agent(name) VALUES("Axis Snowdrop");
 INSERT INTO agent(name) VALUES("Gamma Omicron");
 INSERT INTO agent(name) VALUES("Emerald Ruby Diamond");
 
---insert customer info (id auto increments)--
 INSERT INTO customer(customer_name, agent_id)
 VALUES ("Carlo Mendoza", 1);
 INSERT INTO customer(customer_name, agent_id)
@@ -126,7 +118,6 @@ VALUES ("Tim Bergling", 3);
 INSERT INTO customer(customer_name, agent_id)
 VALUES ("Kyrre Gorvell-Dahl", 1);
 
---insert orders--
 INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
 VALUES (1, FALSE, "Carlo Mendoza", "Marikina City", NOW(), '2017-05-15', '12:30:00');
 INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
@@ -138,7 +129,6 @@ VALUES (4, FALSE, "Tim Bergling", "Stockholm, Sweden", NOW(), '2017-05-16', '06:
 INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
 VALUES (5, TRUE, "Dara Hayes", "Bergen, Norway", NOW(), '2017-05-17', '08:30:00');
 
---insert requests from orders--
 INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
 VALUES (1, "Flipper", "Red", "~Carlo~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Flipper") * 1) - 
 	(SELECT (SELECT discount FROM catalog WHERE product_type = "Flipper") * 1))));
