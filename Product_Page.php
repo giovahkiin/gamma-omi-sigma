@@ -3,103 +3,72 @@
     <head>
         <meta charset="UTF-8">
         <title>Product Page</title>
-        <?php
-            include 'config.php';
-            session_start();
-        ?>
+        <link rel ="stylesheet" type= "text/css" href="Product_Page.css">
     </head>
 
     <body>
-        <div id="container">
-            <div id = "Bar">
-                <ul>
-                    <li> <a href = "./Main_Menu.php"> Main Menu </a></li>
-                    <li> User Name Here </li>
-                    <li> <a href = "./Login.php"> Log Out </a></li>
+        <div class="container">
+            <div class = "Bar">
+                <ul id = "BarList">
+                    <li id = "Name"> User Name Here </li>
+                    <li> <a href = "./Main_Menu.php"> Main Menu </a> </li>
+                    <li> <a href = "./Login.php"> Log Out </a> </li>
                 </ul>
-            </div>
-            <div id="header">
-                <div id="Product X">
-                <?php
-                    if ($_GET["line"] == "PenOrg") {
-                        $line = "Pen Organizer";
-                    } else {
-                        $line = $_GET["line"];
-                    }
+        </div>
 
-                    echo "<h1>" . $line . "s</h1>";
-                 ?>
-                </div>
+        <div id="header">
+            <div id="Product X">
+            <!-- Product X is just a placeholder for the name of the product-->
+                <h1>Product X</h1>
             </div>
-
+            
+            
+            </div>
             <div id = "content">
                 <div id = "left">
                     <div id = "leftInput">
-                    <form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="POST">
+                    <form>
+                    Type:<br>
+                    <!-- This input for type is a placeholder since drop down buttons require css-->
+                    <input type = "text" name="Type" placeholder="Type"><br>
 
-                    <?php
-                        echo "Type:<br>";
+                    Color:<br>
 
-                        $type_result = $conn->query("SELECT product_type FROM catalog WHERE product_line = '". $line ."' ORDER BY product_type");
-                        echo "<select name = 'Type'>";
-                        while ($row = $type_result->fetch_assoc()) {
-                            unset($product_type);
-                            $product_type = $row['product_type'];
-                            echo "<option value = " . $product_type . ">" . $product_type . "</option>";
-                        }
-                        echo "</select>";
-                     ?>
+                    Personalization Options:<br>
+                    <!-- This too is a placeholder since drop down buttons require css-->    
+                    <input type = "text" name ="Options" placeholder ="Options"><br>
+                        <!-- Autofill-->
+                    Dimensions:<br>
+                    <input type="text" name="length" placeholder="Length">
+                    <input type="text" name="width" placeholder="Width">
+                    <input type="text" name="height" placeholder="Height"><br>
 
-                    <div id="buttons">
-                        Colors<br>
-                        <input type="radio" name="color" value="red"> Red<br>
-                        <input type="radio" name="color" value="orange"> Orange <br>
-                        <input type="radio" name="color" value="yellow"> Yellow<br>
-                        <input type="radio" name="color" value="green"> Green<br>
-                        <input type="radio" name="color" value="purple"> Purple<br>
-                        <input type="radio" name="color" value="pink"> Pink<br>
-                        <input type="radio" name="color" value="black"> Black<br>
-                    </div>
-
-                    Personalization:<br>
-                    <!-- This too is a placeholder since drop down buttons require css-->
-                    <input type = "text" name ="Options" placeholder ="Personalization"><br>
+                    Number of Slots:
+                    <input type="number" name="slots" value="0" min="1" max="99"><br>
 
                     Quantity:
                     <input type = "number" name="Quantity" value ="0" min="1" max = "99"> <br>
-
-                    <div id = "rightSubmit">
-                    <input  type= submit value ="Submit" >
+                    <!-- Autofill-->
+                    Price:
+                    <input type = "text" name = "Price" placeholder = "Price"> <br>
                     </form>
                     </div>
+                    <div id = "rightSubmit">
+                    <form>
+                    <input type= "submit" value ="Submit">
+                    </form>
+                    </div>    
+                
                 </div>
-
-                <?php
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        $Type =  test_input($_POST["Type"]);
-                        $color =  test_input($_POST["color"]);
-                        $Options =  test_input($_POST["Options"]);
-                        $Quantity =  test_input($_POST["Quantity"]);
-
-                        $sql ="INSERT INTO request (order_no, product_type, color, personalization, quantity, total_amount)
-                        VALUES ((SELECT order_no FROM orders ORDER BY order_no DESC LIMIT 1), '".$Type."', '".$color."', '".$Options."', $Quantity, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = '".$Type."') * $Quantity) - (SELECT (SELECT discount FROM catalog WHERE product_type = '".$Type."') * $Quantity))));";
-
-                        //does not subtract from stock yet
-
-                        if ($conn->query($sql) === TRUE) {
-                            echo "Order successful!";
-                            header("Location:Catalog.php");
-                            exit; // <- don't forget this!
-                        } else {
-                            echo "Error: " . $sql . "<br>" . $conn->error;
-                        }
-        				$conn->close();
-                    }
-                ?>
-
                 <div right>
-                    <h5>20% off!</h5>
+                    <!-- Displays discount if there is any 20% off is just a placeholder-->
+                    <div id ="productPicture">
+                    <h5>Discount</h5>
                     <h1>Insert Image</h1>
+                        <div id= "Description">
+                            <TEXTAREA Name="description" placeholder = "Description" ROWS=8 COLS=20></TEXTAREA>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

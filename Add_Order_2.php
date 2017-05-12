@@ -23,9 +23,9 @@
 
 		<div id = "MenuItems">
 			<ul>
-				<li> <a href = "./Product_Page.php?line=Folder"> Folders </a> </li>
-				<li> <a href = "./Product_Page.php?line=PenOrg"> Pen Organizers </a> </li>
-				<li> <a href = "./Product_Page.php?line=Planner"> Planners </a> </li>
+				<li> <a href = "./Add_Order_3.php?line=Folder"> Folders </a> </li>
+				<li> <a href = "./Add_Order_3.php?line=PenOrg"> Pen Organizers </a> </li>
+				<li> <a href = "./Add_Order_3.php?line=Planner"> Planners </a> </li>
 			</ul>
 		</div>
 
