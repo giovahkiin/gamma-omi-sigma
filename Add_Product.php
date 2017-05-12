@@ -1,4 +1,4 @@
-<!-- edited -->
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -10,20 +10,20 @@
 
     <body>
         <div id = "container">
-            <div id = "Bar">
-                <ul>
-                    <li> <a href = "./Main_Menu.php"> Main Menu </a></li>
-                    <li> User Name Here </li>
-                    <li> <a href = "./Login.php"> Log Out </a></li>
+            <div class = "Bar">
+                <ul id = "BarList">
+                    <li id = "Name"> User Name Here </li>
+                    <li> <a href = "./Main_Menu.php"> Main Menu </a> </li>
+                    <li> <a href = "./Login.php"> Log Out </a> </li>
                 </ul>
             </div>
-            <div id = "productHeader">
+            <div id = "Header">
                 <div id = "AddProduct">
                     <h1>Add Product</h1>
                 </div>
             </div>
 
-            <div id = "content">
+            <div class = "content">
                 <div id = "left">
 
                         <div id="leftforms">
@@ -49,23 +49,27 @@
 
                         <!-- We might change the radio buttons to a drop down menu-->
                         </div>
-                </div>
 
-                <div id="right">
-                        <div id="rightforms">
                         Personalization Limit:<br>
-                        <input type = "number" name="pLimit" value="0" min="1" max="10"> <br>
+                        <input type = "number" name="pLimit" value="0" min="1" max="10" placeholder = "Limit"> <br>
 
                         Suggested Retail Price:<br>
-                        <input type="text" name="srp" placeholder = SRP required>
+                        <input type="text" name="srp" placeholder = SRP>
                         </div>
 
-                        <div id="submit">
+                </div>
+
+                <!-- <div id="right">
+                        <div id="rightforms">
+                        
+                </div> -->
+                <div id = "footer">
+                    <div id="submit">
 
                         <input type= "reset" value = "Reset">
                         <input type= "submit" value="Submit">
                         </form>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -144,14 +148,10 @@
                     } else {
                         echo "Error: " . $sql . "<br>" . $conn->error;
                     }
-                    
+
     				$conn->close();
                 }
             ?>
-
-            <div id = "footer">
-
-            </div>
         </div>
     </body>
 
