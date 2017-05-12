@@ -27,15 +27,15 @@
 
             <div id ="content">
                 <div id = "left">
-                    <form method="POST" action="./Catalog.php">
-                    Order ID:<br>
-                    <input type="text" name="orderID" placeholder="Order ID"> <br>
+                    <form method="POST" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>>
+                    <!-- Order ID:<br>
+                    <input type="text" name="orderID" placeholder="Order ID"> <br> -->
 
                     Customer ID:<br>
                     <input type="text" name="customerID" placeholder="Customer ID"><br>
 
-                    Assigned Agent ID:<br>
-                    <input type="text" name="agentID" placeholder="Agent ID"><br>
+                    <!-- Assigned Agent ID:<br>
+                    <input type="text" name="agentID" placeholder="Agent ID"><br> -->
                 </div>
 
                 <div id= "right">
@@ -54,13 +54,39 @@
                         <input type="time" name="deliv_time" placeholder="HH:MM:SS"><br>
                     </div>
 
-                    Is it a Gift?<br>
-                    <input type="checkbox" name="isGift" value="yes">Yes<br>
+                    Will this be a gift?<br>
+                    <input type="radio" name="isGift" value="1">Yes<br>
+                    <input type="radio" name="isGift" value="0">No<br>
 
                     <div id="submit">
                         <input type="submit" value ="Proceed">
                         </form>
                     </div>
+
+                    <?php
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $customerID = $_POST['customerID'];
+                            $recFName = $_POST['recFName'];
+                            $recLName = $_POST['recLName'];
+                            $address = $_POST['address'];
+                            $date = $_POST['date'];
+                            $deliv_time = $_POST['deliv_time'];
+                            $isGift = $_POST['isGift'];
+
+                            $sql1 ="INSERT INTO orders (customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
+                            VALUES (" .$customerID.", ".$isGift.", CONCAT('".$recFName."', ' ', '".$recLName ."'), '".$address."', NOW(), '".$date."', '".$deliv_time."');";
+
+                            if ($conn->query($sql1) === TRUE) {
+                                echo "<script type = 'text/javascript'>
+                                        alert ('DEBUGpart1 success');
+                                    </script>";
+                                header("Location:Catalog.php");
+                                exit;
+                            } else {
+                                echo "Error: " . $sql1 . "<br>" . $conn->error;
+                            }
+                        }
+                     ?>
 
                 </div>
             </div>

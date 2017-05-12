@@ -5,15 +5,7 @@
 		<?php
             include 'config.php';
 			session_start();
-            $_SESSION['orderID'] = $_POST['orderID'];
-            $_SESSION['customerID'] = $_POST['customerID'];
-            $_SESSION['agentID'] = $_POST['agentID'];
-            $_SESSION['recFName'] = $_POST['recFName'];
-            $_SESSION['recLName'] = $_POST['recLName'];
-            $_SESSION['address'] = $_POST['address'];
-            $_SESSION['date'] = $_POST['date'];
-			$_SESSION['deliv_time'] = $_POST['deliv_time'];
-            $_SESSION['isGift'] = $_POST['isGift'];
+
         ?>
 	</head>
 	<body>
@@ -34,5 +26,10 @@
 				<li> <a href = "./Product_Page.php?line=Planner"> Planners </a> </li>
 			</ul>
 		</div>
+
+		<form action="Main_Menu.php">
+		    <input type="submit" value="Checkout" />
+		</form>
+
 	</body>
 </html>
