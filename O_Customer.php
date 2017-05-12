@@ -24,7 +24,7 @@
 		<div id = "Table">
 			<?php
 			 	include 'config.php';
-				$sqlresult = $conn->query("SELECT customer.customer_id AS 'Customer Number', customer.customer_name AS 'Name', agent.name AS 'Agent', orders.order_no as 'Order Number', request.total_amount AS 'Total Amount' FROM customer, agent, orders, request WHERE customer.agent_id = agent.agent_id AND customer.customer_id = orders.customer_id AND orders.order_no = request.order_no;");
+				$sqlresult = $conn->query("SELECT customer.customer_id AS 'Customer ID', agent.name AS 'Agent', customer.customer_name AS 'Customer Name', orders.order_no AS 'Order Number', SUM(request.total_amount) AS  'Total Amount' FROM orders, agent, customer, request WHERE orders.customer_id = customer.customer_id AND customer.agent_id = agent.agent_id AND orders.order_no = request.order_no GROUP BY orders.order_no;");
 	            echo sql_to_html_table($sqlresult, $delim = "\n");
 				$conn->close();
 			 ?>

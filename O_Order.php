@@ -27,7 +27,7 @@
 		<div id = "Table">
 			<?php
 				include 'config.php';
-				$sqlresult = $conn->query("SELECT request.order_no AS 'Order Number', request.quantity AS 'Quantity Ordered', request.total_amount as 'Total Amount' FROM request, orders WHERE request.order_no = orders.order_no;");
+				$sqlresult = $conn->query("SELECT order_no AS 'Order Number', product_type as 'Item Name', quantity AS 'Quantity Ordered', total_amount as 'Total Amount' FROM request");
 				echo sql_to_html_table($sqlresult, $delim = "\n");
 				$conn->close();
 			?>
