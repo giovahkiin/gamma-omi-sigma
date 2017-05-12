@@ -20,7 +20,7 @@
 		<div id = "Table">
 			<?php
 			 	include 'config.php';
-				$sqlresult = $conn->query("SELECT customer.customer_id AS 'Customer Number', customer.name AS 'Name', agent.name AS 'Agent', orders.order_no as 'Order Number', orders.amount_due AS 'Total Amount' FROM customer, agent, orders WHERE customer.agent_id = agent.agent_id AND customer.customer_id = orders.customer_id;");
+				$sqlresult = $conn->query("SELECT customer.customer_id AS 'Customer Number', customer.customer_name AS 'Name', agent.name AS 'Agent', orders.order_no as 'Order Number', request.total_amount AS 'Total Amount' FROM customer, agent, orders, request WHERE customer.agent_id = agent.agent_id AND customer.customer_id = orders.customer_id AND orders.order_no = request.order_no;");
 	            echo sql_to_html_table($sqlresult, $delim = "\n");
 				$conn->close();
 			 ?>

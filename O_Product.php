@@ -21,7 +21,7 @@
 			<table>
 				<?php
 	 			 	include 'config.php';
-	 				$sqlresult = $conn->query("SELECT request_item.item_id AS 'Item Number', request_item.product_type AS 'Type', request.color AS 'Color', request.quantity as 'Quantity Ordered', request.total_amount AS 'Total Amount' FROM request_item, request, item WHERE request_item.item_id = item.item_id AND request.product_type = request_item.product_type;");
+	 				$sqlresult = $conn->query("SELECT request.product_type AS 'Item Name', request.color AS 'Color', request.quantity as 'Quantity Ordered', request.total_amount AS 'Total Amount' FROM request;");
 		            echo sql_to_html_table($sqlresult, $delim = "\n");
 					$conn->close();
 			 	?>
