@@ -68,20 +68,41 @@
             </div>
 
             <?php
+            date_default_timezone_set('Asia/Taipei');
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $productLine =  test_input($_POST["productLine"]);
                     $productType =  test_input($_POST["productType"]);
                     $color =  test_input($_POST["color"]);
                     $stock =  test_input($_POST["stock"]);
+                    $curdate = date("Y-m-d");
 
-                $sql ="UPDATE stock SET quantity = $stock, last_update = NOW() WHERE product_type = '".$productType."' AND color = '".$color."';";
+                $sql ="SELECT last_update from stock where product_type = '".$productType."' AND color = '".$color."' ORDER BY last_update DESC LIMIT 1;";
 
-                 if ($conn->query($sql) === TRUE) {
+                $result = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_assoc($result);
+
+                  if (mysqli_query($conn, $sql)) {
+                } else {
+                         echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+                     }
+
+                if ( $row['last_update'] == $curdate ){
+                    $sql1 ="UPDATE stock SET quantity = $stock, last_update = NOW() WHERE product_type = '".$productType."' AND color = '".$color."' AND last_update = '".$curdate."';";
+                }
+                else {
+                    $sql1 ="INSERT INTO stock(product_type, color, quantity, last_update) VALUES ('".$productType."','".$color."', $stock, NOW());";
+                }
+
+                    
+
+                 if ($conn->query($sql1) === TRUE) {
+                        
                         echo "Stock for ". $productType . " has been updated successfully.<br>";
                     }
                  else {
                         echo "Error: " . $sql . "<br>" . $conn->error;
                     }
+                
             }
             ?>
 
