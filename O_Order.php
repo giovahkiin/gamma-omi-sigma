@@ -2,33 +2,42 @@
 <html>
 	<head>
 		<title> Order Reports </title>
+		<link rel = "stylesheet" type = "text/css" href = "O_Order.css"/>
 	</head>
 	<body>
-		<div id = "Bar">
-			<ul>
-				<li> <a href = "./reports.php"> < Main Menu </a> </li>
-                <li> User Name Here </li>
-				<li> <a href = "./login.php"> Log Out </a></li>
-		</div>
+
+		<div class = "Bar">
+            <ul id = "BarList">
+                <li id = "Name"> User Name Here </li>
+                <li> <a href = "./Main_Menu.php"> Main Menu </a> </li>
+                <li> <a href = "./Login.php"> Log Out </a> </li>
+            </ul>
+        </div>
+
 		<div id = "Title">
-			<input type = "text" placeholder = "date">
+			<input type = "date" name = "date" placeholder = "Date">
 			<h1> Reports </h1>
 		</div>
+
 		<div id = "Name">
 			<h2> Orders </h2>
 			<input type = "text" placeholder = "search">
+		</div>
+
 		<div id = "Table">
+			<?php
+				include 'config.php';
+				$sqlresult = $conn->query("SELECT request.order_no AS 'Order Number', request.quantity AS 'Quantity Ordered', request.total_amount as 'Total Amount' FROM request, orders WHERE request.order_no = orders.order_no;");
+				echo sql_to_html_table($sqlresult, $delim = "\n");
+				$conn->close();
+			?>
 			<table>
-				<?php
-				 	include 'config.php';
-					$sqlresult = $conn->query("SELECT request.order_no AS 'Order Number', request.quantity AS 'Quantity Ordered', request.total_amount as 'Total Amount' FROM request, orders WHERE request.order_no = orders.order_no;");
-		            echo sql_to_html_table($sqlresult, $delim = "\n");
-					$conn->close();
-			 	?>
-				<tr>
-					<th> Total Sales </th>
+				<tfoot>
+					<td> </td>
+					<td> </td>
+					<td> Total Sales </td>
 					<td> (x) </td>
-				</tr>
+				</tfoot>
 			</table>
 		</div>
 	</body>
