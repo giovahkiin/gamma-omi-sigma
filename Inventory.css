@@ -1,0 +1,144 @@
+@font-face
+{
+    font-family: PrintClearly;
+    src: url("PrintClearly.otf");
+}
+
+@font-face
+{
+    font-family: PrintBold;
+    src: url("PrintBold.otf");
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* For the title bar*/
+
+#BarList li
+{
+    list-style-type: none;
+    display: inline;
+    margin-right: 10px;
+    margin-left: 25px;
+}
+
+#BarList li a
+{
+    text-decoration: none;
+    text-decoration-color: none;
+    padding: 15px 10px;
+    color: white;
+}
+
+#BarList a:visited 
+{
+    color: white;
+}
+
+#BarList li a:hover
+{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Bar
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-image: url("Barground.png");
+    background-size: 200px;
+    font-family: PrintBold, sans-serif;
+    color: white;
+    font-size: 30px;
+}
+
+/* */
+
+#Title
+{
+    text-align: right;
+    background-color: #66CCFF;
+    color: white;
+}
+
+#Title h1, input
+{
+    display: inline;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}   
+
+h1
+{
+    padding-right: 50px;
+    margin-left: 20px;
+    font-family: PrintBold;
+    font-size: 50px;
+}
+
+input
+{
+    font-family: PrintClearly;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+table
+{
+    border-collapse: collapse;
+    width: 80%;
+    border: 2px solid #AAAAAA;
+}
+
+#Table th
+{
+    text-align: center;
+    background-color: #66CCFF;
+    color: white;
+}
+
+th, td 
+{
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+
+tfoot
+{
+    background-color: #FFBFE0;
+    color: white;
+}
+
+#Table
+{
+    margin-top: 40px;
+    word-spacing: 8px ;
+    text-align: center;
+}
+
+tr, th
+{
+    text-align: center;
+    table-layout: center;
+}
+
+th, tfoot
+{
+    font-family: PrintBold;
+    font-size: 25px;
+}
+
+tr
+{
+    font-family: PrintClearly;
+    font-size: 25px;
+}
+
+table
+{
+    margin: auto;
+}

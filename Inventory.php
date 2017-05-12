@@ -2,47 +2,29 @@
 <html>
 	<head>
 		<title> Inventory </title>
+		<link rel = "stylesheet" type = "text/css" href = "Inventory.css"/>
 	</head>
 	<body>
-		<div id = "Bar">
-			<ul>
-				<li> <a href = "./Main_Menu.php"> < Main Menu </a> </li>
-                <li> User Name Here </li>
-				<li> <a href = "./Login.php"> Log Out </a></li>
-			</ul>
-		</div>
+
+		<div class = "Bar">
+            <ul id = "BarList">
+                <li id = "Name"> User Name Here </li>
+                <li> <a href = "./Main_Menu.php"> Main Menu </a> </li>
+                <li> <a href = "./Login.php"> Log Out </a> </li>
+            </ul>
+       	</div>
+
 		<div id = "Title">
 			<input type = "text" placeholder = "search">
 			<h1> Inventory </h1>
 		</div>
 		<div id = "Table">
-			<table>
-				<tr> 
-					<th> Date </th>
-				</tr>
-				<tr> 
-					<td> Item </td>
-					<td> Red </td>
-					<td> Orange </td>
-					<td> Yellow </td>
-					<td> Green </td>
-					<td> Blue </td>
-					<td> Purple </td>
-					<td> Pink </td>
-					<td> Black </td>
-				</tr>
-				<tr>
-					<td> Product 1 <td>
-					<td> (x) </td>
-					<td> (x) </td>
-					<td> (x) </td>
-					<td> (x) </td>
-					<td> (x) </td>
-					<td> (x) </td>
-					<td> (x) </td>
-					<td> (x) </td>
-				</tr>
-			</table>
+			<?php
+				include 'config.php';
+				$sqlresult = $conn->query("SELECT product_type AS 'Item', color AS 'Color', quantity AS 'Quantity', last_update AS 'Last Update' FROM stock;");
+				echo sql_to_html_table($sqlresult, $delim = "\n");
+				$conn->close();
+			 ?>
 		</div>
 	</body>
 </html>
