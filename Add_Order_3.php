@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE HTML>
 <html>
    <head>
@@ -76,7 +74,7 @@
                    $Quantity =  test_input($_POST["Quantity"]);
 
                    $sql ="INSERT INTO request (order_no, product_type, color, personalization, quantity, total_amount)
-                   VALUES ((SELECT order_no FROM orders ORDER BY order_no DESC LIMIT 1), '".$Type."', '".$color."', '".$Options."', $Quantity, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = '".$Type."') * $Quantity) - (SELECT (SELECT discount FROM catalog WHERE product_type = '".$Type."') * $Quantity))));";
+                        VALUES ((SELECT order_no FROM orders ORDER BY order_no DESC LIMIT 1), '".$Type."', '".$color."', '".$Options."', $Quantity, (SELECT((SELECT(SELECT price FROM catalog WHERE product_type = '".$Type."')* $Quantity) -(SELECT((SELECT discount FROM catalog WHERE product_type ='".$Type."')*( SELECT(SELECT price FROM catalog WHERE product_type = '".$Type."') * $Quantity))))));";
 
                    //does not subtract from stock yet
 
