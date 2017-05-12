@@ -19,89 +19,89 @@ INSERT INTO color(color_name) VALUES("Pink");
 INSERT INTO color(color_name) VALUES("Black");
 
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Flipper", "Red", 1, NOW());
+VALUES("Flipper", "Red", 1, '2017-05-10');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Flipper", "Orange", 1,  NOW());
+VALUES("Flipper", "Orange", 1, '2017-05-10');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Flipper", "Yellow", 1, NOW());
+VALUES("Flipper", "Yellow", 1,'2017-05-10');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Flipper", "Green", 1, NOW());
+VALUES("Flipper", "Green", 1, '2017-05-10');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Flipper", "Blue", 1,  NOW());
+VALUES("Flipper", "Blue", 1,  '2017-05-10');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Flipper", "Purple", 1,  NOW());
+VALUES("Flipper", "Purple", 1,  '2017-05-10');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Flipper", "Pink", 1,  NOW());
+VALUES("Flipper", "Pink", 1, '2017-05-10');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Flipper", "Black", 1,  NOW());
+VALUES("Flipper", "Black", 1,  '2017-05-10');
 
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Slinger", "Red", 1,  NOW());
+VALUES("Slinger", "Red", 1, '2017-05-11');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Slinger", "Orange", 1,  NOW());
+VALUES("Slinger", "Orange", 1,  '2017-05-11');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Slinger", "Yellow", 1,  NOW());
+VALUES("Slinger", "Yellow", 1, '2017-05-11');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Slinger", "Green", 1,  NOW());
+VALUES("Slinger", "Green", 1,  '2017-05-11');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Slinger", "Blue", 1,  NOW());
+VALUES("Slinger", "Blue", 1,  '2017-05-11');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Slinger", "Purple", 1,  NOW());
+VALUES("Slinger", "Purple", 1, '2017-05-11');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Slinger", "Pink", 1,  NOW());
+VALUES("Slinger", "Pink", 1,  '2017-05-11');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Slinger", "Black", 1,  NOW());
+VALUES("Slinger", "Black", 1, '2017-05-11');
 
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Doodler", "Red", 1,  NOW());
+VALUES("Doodler", "Red", 1,  '2017-05-12');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Doodler", "Orange", 1,  NOW());
+VALUES("Doodler", "Orange", 1,  '2017-05-12');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Doodler", "Yellow", 1,  NOW());
+VALUES("Doodler", "Yellow", 1,  '2017-05-12');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Doodler", "Green", 1,  NOW());
+VALUES("Doodler", "Green", 1,  '2017-05-12');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Doodler", "Blue", 1,  NOW());
+VALUES("Doodler", "Blue", 1,  '2017-05-12');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Doodler", "Purple", 1,  NOW());
+VALUES("Doodler", "Purple", 1, '2017-05-12');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Doodler", "Pink", 1,  NOW());
+VALUES("Doodler", "Pink", 1,  '2017-05-12');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Doodler", "Black", 1,  NOW());
+VALUES("Doodler", "Black", 1,  '2017-05-12');
 
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Filer", "Red", 1,  NOW());
+VALUES("Filer", "Red", 1, '2017-05-13');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Filer", "Orange", 1,  NOW());
+VALUES("Filer", "Orange", 1, '2017-05-13');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Filer", "Yellow", 1,  NOW());
+VALUES("Filer", "Yellow", 1,  '2017-05-13');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Filer", "Green", 1,  NOW());
+VALUES("Filer", "Green", 1,  '2017-05-13');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Filer", "Blue", 1,  NOW());
+VALUES("Filer", "Blue", 1,  '2017-05-13');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Filer", "Purple", 1, NOW());
+VALUES("Filer", "Purple", 1, '2017-05-13');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Filer", "Pink", 1, NOW());
+VALUES("Filer", "Pink", 1, '2017-05-13');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Filer", "Black", 1, NOW());
+VALUES("Filer", "Black", 1, '2017-05-13');
 
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Shifter", "Red", 1, NOW());
+VALUES("Shifter", "Red", 1, '2017-05-14');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Shifter", "Orange", 1, NOW());
+VALUES("Shifter", "Orange", 1, '2017-05-14');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Shifter", "Yellow", 1, NOW());
+VALUES("Shifter", "Yellow", 1, '2017-05-14');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Shifter", "Green", 1, NOW());
+VALUES("Shifter", "Green", 1, '2017-05-14');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Shifter", "Blue", 1, NOW());
+VALUES("Shifter", "Blue", 1, '2017-05-14');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Shifter", "Purple", 1, NOW());
+VALUES("Shifter", "Purple", 1, '2017-05-14');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Shifter", "Pink", 1, NOW());
+VALUES("Shifter", "Pink", 1, '2017-05-14');
 INSERT INTO stock(product_type, color, quantity, last_update)
-VALUES("Shifter", "Black", 1, NOW());
+VALUES("Shifter", "Black", 1, '2017-05-14');
 
 INSERT INTO agent(name) VALUES("Axis Snowdrop");
 INSERT INTO agent(name) VALUES("Gamma Omicron");
@@ -119,43 +119,53 @@ INSERT INTO customer(customer_name, agent_id)
 VALUES ("Kyrre Gorvell-Dahl", 1);
 
 INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
-VALUES (1, FALSE, "Carlo Mendoza", "Marikina City", NOW(), '2017-05-15', '12:30:00');
+VALUES (1, FALSE, "Carlo Mendoza", "Marikina City", '2017-05-10', '2017-05-15', '12:30:00');
 INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
-VALUES (2, FALSE, "Gener Lopez", "Quezon City", NOW(), '2017-05-15', '14:30:00');
+VALUES (2, FALSE, "Gener Lopez", "Quezon City", '2017-05-11', '2017-05-15', '14:30:00');
 INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
-VALUES (3, FALSE, "Christian Chan", "Manila City", NOW(), '2017-05-16', '15:00:00');
+VALUES (3, FALSE, "Christian Chan", "Manila City", '2017-05-12', '2017-05-16', '15:00:00');
 INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
-VALUES (4, FALSE, "Tim Bergling", "Stockholm, Sweden", NOW(), '2017-05-16', '06:45:00');
+VALUES (4, FALSE, "Tim Bergling", "Stockholm, Sweden", '2017-05-13', '2017-05-16', '06:45:00');
 INSERT INTO orders(customer_id, isGift, recipient_name, address, order_date, delivery_date, delivery_time)
-VALUES (5, TRUE, "Dara Hayes", "Bergen, Norway", NOW(), '2017-05-17', '08:30:00');
+VALUES (5, TRUE, "Dara Hayes", "Bergen, Norway", '2017-05-14', '2017-05-17', '08:30:00');
 
 INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
 VALUES (1, "Flipper", "Red", "~Carlo~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Flipper") * 1) - 
 	(SELECT (SELECT discount FROM catalog WHERE product_type = "Flipper") * 1))));
 INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
-VALUES (1, "Flipper", "Pink", "~Mendoza~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Flipper") * 1) - 
+VALUES (1, "Slinger", "Pink", "~Mendoza~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Slinger") * 1) - 
+	(SELECT (SELECT discount FROM catalog WHERE product_type = "Slinger") * 1))));
+INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
+VALUES (2, "Doodler", "Orange", "~Gio~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Doodler") * 1) - 
+	(SELECT (SELECT discount FROM catalog WHERE product_type = "Doodler") * 1))));
+INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
+VALUES (2, "Filer", "Black", "~Lopez~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Filer") * 1) - 
+	(SELECT (SELECT discount FROM catalog WHERE product_type = "Filer") * 1))));
+INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
+VALUES (3, "Flipper", "Yellow", "~300~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Flipper") * 1) - 
 	(SELECT (SELECT discount FROM catalog WHERE product_type = "Flipper") * 1))));
 INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
-VALUES (2, "Slinger", "Orange", "~Gio~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Slinger") * 1) - 
-	(SELECT (SELECT discount FROM catalog WHERE product_type = "Slinger") * 1))));
-INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
-VALUES (2, "Slinger", "Black", "~Lopez~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Slinger") * 1) - 
-	(SELECT (SELECT discount FROM catalog WHERE product_type = "Slinger") * 1))));
-INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
-VALUES (3, "Doodler", "Yellow", "~300~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Doodler") * 1) - 
-	(SELECT (SELECT discount FROM catalog WHERE product_type = "Doodler") * 1))));
-INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
-VALUES (3, "Doodler", "Blue", "~CCC~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Doodler") * 1) - 
-	(SELECT (SELECT discount FROM catalog WHERE product_type = "Doodler") * 1))));
-INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
-VALUES (4, "Filer", "Green", "~Pewds~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Filer") * 1) - 
+VALUES (3, "Filer", "Blue", "~CCC~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Filer") * 1) - 
 	(SELECT (SELECT discount FROM catalog WHERE product_type = "Filer") * 1))));
 INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
-VALUES (4, "Filer", "Purple", "~Pewdie~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Filer") * 1) - 
-	(SELECT (SELECT discount FROM catalog WHERE product_type = "Filer") * 1))));
+VALUES (4, "Slinger", "Green", "~Pewds~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Slinger") * 1) - 
+	(SELECT (SELECT discount FROM catalog WHERE product_type = "Slinger") * 1))));
+INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
+VALUES (4, "Doodler", "Purple", "~Pewdie~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Doodler") * 1) - 
+	(SELECT (SELECT discount FROM catalog WHERE product_type = "Doodler") * 1))));
+
 INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
 VALUES (5, "Shifter", "Red", "~Jack~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Shifter") * 1) - 
 	(SELECT (SELECT discount FROM catalog WHERE product_type = "Shifter") * 1))));
 INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
-VALUES (5, "Shifter", "Blue", "~Septiceye~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Shifter") * 1) - 
-	(SELECT (SELECT discount FROM catalog WHERE product_type = "Shifter") * 1))));
+VALUES (5, "Flipper", "Blue", "~Septiceye~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Flipper") * 1) - 
+	(SELECT (SELECT discount FROM catalog WHERE product_type = "Flipper") * 1))));
+INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
+VALUES (5, "Doodler", "Pink", "~ohayou~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Doodler") * 1) - 
+	(SELECT (SELECT discount FROM catalog WHERE product_type = "Doodler") * 1))));
+INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
+VALUES (5, "Slinger", "Black", "~arigatou~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Slinger") * 1) - 
+	(SELECT (SELECT discount FROM catalog WHERE product_type = "Slinger") * 1))));
+INSERT INTO request(order_no, product_type, color, personalization, quantity, total_amount)
+VALUES (5, "Filer", "Yellow", "~kawaii~", 1, (SELECT((SELECT (SELECT price FROM catalog WHERE product_type = "Filer") * 1) - 
+	(SELECT (SELECT discount FROM catalog WHERE product_type = "Filer") * 1))));
